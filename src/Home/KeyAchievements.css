@@ -1,0 +1,51 @@
+.key-achievements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    background-color: rgba(255, 255, 255, 0); /* Fully transparent background */
+    border-radius: 10px;
+    margin: 40px 0;
+    gap: 15px;
+}
+
+.achievement-item {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background for items */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Semi-transparent border */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.achievement-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.achievement-item h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.achievement-item p {
+    font-size: 14px;
+    color: #666666;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .key-achievements {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .achievement-item {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}

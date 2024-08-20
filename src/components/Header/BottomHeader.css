@@ -1,0 +1,106 @@
+.bottom-header {
+  background-color: #ffffff; /* White background for the main header */
+  padding: 12px 25px;
+  border-bottom: 1px solid #e0e0e0; /* Light grey border */
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.bottom-header nav ul {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bottom-header nav ul li {
+  position: relative;
+  margin-right: 30px;
+}
+
+.bottom-header nav ul li a {
+  color: #0056b3; /* Blue text color */
+  font-weight: 600;
+  padding: 12px 20px;
+  display: block;
+  font-size: 16px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 4px; /* Rounded corners */
+}
+
+.bottom-header nav ul li a:hover {
+  color: #ffffff;
+  background-color: #0056b3; /* Blue background on hover */
+  font-weight: 700;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff; /* White background for dropdown */
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
+  min-width: 240px;
+  z-index: 1000;
+  text-align: left;
+  padding: 12px 0;
+}
+
+.dropdown-content a {
+  color: #0056b3; /* Blue text color for dropdown items */
+  padding: 12px 25px;
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0; /* Light grey background on hover */
+  color: #0056b3;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #ffffff; /* White background for submenus */
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 240px;
+  z-index: 1000;
+  text-align: left;
+  padding: 12px 0;
+}
+
+.dropdown-submenu:hover .dropdown-submenu-content {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) translateX(0);
+  transition: all 0.3s ease;
+}
+
+.dropdown-submenu a {
+  padding: 12px 25px;
+  white-space: nowrap;
+  color: #0056b3;
+}

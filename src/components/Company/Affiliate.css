@@ -1,0 +1,52 @@
+.affiliate-program-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .affiliate-heading {
+    font-size: 2.5em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .affiliate-description {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .affiliate-subheading {
+    font-size: 1.8em;
+    color: #004085;
+    margin-bottom: 15px;
+  }
+  
+  .affiliate-benefits, .affiliate-steps {
+    font-size: 1.2em;
+    color: #555;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .affiliate-call-to-action {
+    font-size: 1.2em;
+    color: #004085;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .affiliate-signup-link {
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .affiliate-signup-link:hover {
+    text-decoration: underline;
+  }
+  

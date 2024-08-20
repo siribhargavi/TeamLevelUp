@@ -1,0 +1,47 @@
+.partners-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .partners-heading {
+    font-size: 2.5em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .partners-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .partner-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .partner-logo {
+    width: 80%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .partner-name {
+    font-size: 1.5em;
+    color: #004085;
+    margin-bottom: 10px;
+  }
+  
+  .partner-description {
+    font-size: 1.1em;
+    color: #555;
+  }
+  

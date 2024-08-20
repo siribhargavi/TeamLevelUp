@@ -1,0 +1,10 @@
+/* src/components/Home/TextCycler.css */
+.cycling-word {
+    color: #ffcc00; /* Highlighted color for the cycling word */
+    font-weight: 700; /* Bold font for emphasis */
+    font-size: 36px; /* Reduced font size for better balance */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition with slight movement */
+    display: inline-block;
+    transform: translateY(2px); /* Slight adjustment for better vertical alignment */
+  }
+  

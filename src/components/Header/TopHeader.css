@@ -1,0 +1,32 @@
+/* src/components/Header/TopHeader.css */
+.top-header {
+  background: linear-gradient(90deg, #000000, #333333); /* Subtle gradient for a modern look */
+  padding: 5px 0; /* Added some padding for better spacing */
+  height: 30px; /* Slightly increased height for better readability */
+  font-size: 14px;
+  color: #ffffff; /* Ensure text color is white for contrast */
+  text-align: center; /* Center-align the text */
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Center the content horizontally */
+  font-family: 'Poppins', sans-serif; /* Use a clean, modern font */
+}
+
+.top-header p {
+  margin: 0; /* Remove default margin */
+  padding: 0 10px; /* Add some padding around the text */
+  letter-spacing: 0.5px; /* Add slight letter spacing for readability */
+  font-weight: 300; /* Lighten the font weight for a more elegant look */
+
+}
+
+.top-header a {
+  color: #ffcc00; /* Highlight any links with a bright color */
+  text-decoration: none; /* Remove underline from links */
+  margin-left: 10px; /* Add space before any links */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.top-header a:hover {
+  color: #ffffff; /* Change link color on hover */
+}

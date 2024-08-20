@@ -1,0 +1,86 @@
+.features-overview {
+  padding: 60px 20px; /* Compact padding */
+  background-color: rgba(255, 255, 255, 0.5); /* More opaque color */
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.features-overview h2 {
+  font-size: 36px; /* Balanced font size */
+  font-weight: 700; /* Strong emphasis */
+  margin-bottom: 40px; /* Space between heading and features */
+  color: #0056b3; /* Darker shade for better contrast */
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-top: -10px;
+}
+
+.features-overview h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: #ffcc00; /* Primary color underline for emphasis */
+  border-radius: 2px;
+}
+
+.features-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensures the features wrap on smaller screens */
+  gap: 30px; /* Consistent space between items */
+}
+
+.feature-item {
+  background-color: #f9f9f9; /* Soft background for each feature item */
+  border: 1px solid #dddddd; /* Light border for definition */
+  border-radius: 12px; /* Slightly larger rounded corners for a modern look */
+  padding: 25px;
+  width: 280px; /* Fixed width for consistency */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.feature-item img {
+  max-width: 80px; /* Consistent image size */
+  height: auto;
+  margin-bottom: 20px; /* Balanced space below images */
+  border-radius: 8px; /* Rounded image corners */
+}
+
+.feature-item h3 {
+  font-size: 22px; /* Appropriate size for titles */
+  font-weight: 600;
+  margin-bottom: 15px; /* Space between title and text */
+  color: #0056b3; /* Primary color for feature titles */
+}
+
+.feature-item p {
+  font-size: 15px; /* Slightly smaller for better balance */
+  color: #666666; /* Softer color for readability */
+  margin-bottom: 15px; /* Space below text */
+}
+
+.feature-item:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}

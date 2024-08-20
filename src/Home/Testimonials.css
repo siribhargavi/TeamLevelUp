@@ -1,0 +1,89 @@
+.testimonials {
+  padding: 60px 30px; /* Slightly increased padding for more space */
+  text-align: center;
+  animation: gradientAnimation 15s ease infinite;
+
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.testimonials h2 {
+  font-size: 38px;
+  font-weight: 700;
+  color: #004080; /* Darker blue for better contrast */
+  margin-bottom: 40px; /* Increased margin for better spacing */
+  position: relative;
+  display: inline-block;
+  padding-bottom: 12px;
+}
+
+.testimonials h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 80px; /* Wider underline */
+  height: 5px; /* Thicker underline */
+  background-color: #ffc107; /* Slightly lighter yellow */
+  border-radius: 2px;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px; /* Increased gap for better spacing */
+}
+
+.testimonial-card {
+  background-color: #ffffff;
+  border: 1px solid #cccccc; /* Softer border color */
+  border-radius: 16px; /* Larger border radius for a modern look */
+  padding: 35px;
+  width: 300px; /* Slightly wider card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Deeper shadow for more depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px); /* More pronounced lift on hover */
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.testimonial-card img {
+  width: 90px; /* Larger image size */
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 25px; /* Increased margin */
+  border: 3px solid #004080; /* Thicker border */
+}
+
+.quote {
+  font-size: 17px; /* Slightly larger font size */
+  color: #555555; /* Darker grey for more contrast */
+  margin-bottom: 25px; /* Increased margin */
+  font-style: italic;
+}
+
+.name {
+  font-size: 20px; /* Larger font for name */
+  font-weight: 700; /* Bolder font weight */
+  color: #004080;
+  margin-bottom: 8px; /* Increased margin */
+}
+
+.title {
+  font-size: 15px;
+  color: #555555;
+}

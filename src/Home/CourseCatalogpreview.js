@@ -1,8 +1,19 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 import './CourseCatalogPreview.css';
 
 const CourseCatalogPreview = ({ courses }) => {
-  const [activeCategory, setActiveCategory] = useState('Workshops');
+  const [activeCategory, setActiveCategory] = useState('BootCamps');
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleLearnMoreClick = (courseName) => {
+    navigate(`/course/${courseName}`); // Navigate to the respective course page
+  };
+
+  const mapCourseNameToRoute = (courseTitle) => {
+    // Convert course titles to their respective routes
+    return courseTitle.toLowerCase().replace(/ /g, '-'); // Example: "Data Science" -> "data-science"
+  };
 
   return (
     <div className="course-catalog-preview">
@@ -27,7 +38,12 @@ const CourseCatalogPreview = ({ courses }) => {
             <div className="price">
               {course.price} <span className="discount">{course.discount}</span>
             </div>
-            <button className="learn-more-button">Learn More</button>
+            <button
+              className="learn-more-button"
+              onClick={() => handleLearnMoreClick(mapCourseNameToRoute(course.title))}
+            >
+              Learn More
+            </button>
           </div>
         ))}
       </div>

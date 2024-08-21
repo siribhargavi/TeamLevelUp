@@ -5,7 +5,7 @@ import './TopHeader.css'; // For styling
 const TopHeader = () => {
   return (
     <div className="top-header">
-      <p>For any queries, please contact: email@example.com | +1 (123) 456-7890</p>
+      <p>For any queries, please contact: levelupedu.net |siri.bhargavi5@gmail.com | +91 8247275078 | +91 1627373883</p>
     </div>
   );
 };

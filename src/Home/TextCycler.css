@@ -1,10 +1,28 @@
-/* src/components/Home/TextCycler.css */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&display=swap');
+
 .cycling-word {
-    color: #ffcc00; /* Highlighted color for the cycling word */
-    font-weight: 700; /* Bold font for emphasis */
-    font-size: 36px; /* Reduced font size for better balance */
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition with slight movement */
-    display: inline-block;
-    transform: translateY(2px); /* Slight adjustment for better vertical alignment */
-  }
-  
+  color: #f4f4f4; /* Softer white for a more subtle contrast */
+  font-weight: 700;
+  font-size: 28px; /* Slightly larger font size for emphasis */
+  font-family: 'Great Vibes', cursive; /* Elegant cursive font */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  display: block;
+  margin-bottom: 10px; /* Increased margin for better separation */
+  line-height: 1.3; /* More comfortable line height */
+  letter-spacing: 0.10em; /* Reduced letter spacing for a smoother look */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* More pronounced text shadow for depth */
+  text-align: center; /* Center-align the text */
+}
+
+.cycling-sentence {
+  color: #e0e0e0; /* Softer gray for a gentle contrast */
+  font-size: 20px; /* Slightly smaller font size to complement the title */
+  font-family: 'Playfair Display', serif; /* Elegant serif font */
+  transition: opacity 0.5s ease-in-out;
+  display: block;
+  line-height: 1.4; /* Adjusted line height for readability */
+  margin-top: 10px; /* Added margin for separation from the title */
+  letter-spacing: 0.03em; /* Minimal letter spacing for a polished look */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Consistent text shadow */
+  text-align: center; /* Center-align the text */
+}

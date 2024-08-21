@@ -5,12 +5,14 @@ import FeaturesOverview from '../Home/FeaturesOverview';
 import CourseCatalogPreview from '../Home/CourseCatalogpreview';
 import Testimonials from '../Home/Testimonials';
 import CallToAction from '../Home/CallToAction';
+import BannerSection from '../Home/BannerSection';
+
 import KeyAchievements from '../Home/KeyAchievements'; 
 import './HomePage.css';
 
 
 const courses = {
-    Workshops: [
+    BootCamps: [
       {
         id: 1,
         title: 'Full Stack Web Development',
@@ -78,7 +80,7 @@ const courses = {
         discount: '$799',
       },
     ],
-    'Offer Courses': [
+    'Bundled Courses': [
       {
         id: 9,
         title: 'Discounted Python Course',
@@ -125,6 +127,7 @@ const HomePage = () => {
         <div className="shape shape-4"></div>
       </div>
       <HeroSection />
+      <BannerSection/>
       <CourseCatalogPreview courses={courses} />
       <FeaturesOverview />
       <KeyAchievements />

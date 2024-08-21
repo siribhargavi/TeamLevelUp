@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap');
+
 .bottom-header {
   background-color: #ffffff; /* White background for the main header */
   padding: 12px 25px;
   border-bottom: 1px solid #e0e0e0; /* Light grey border */
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
 }
 
 .bottom-header nav ul {
@@ -21,13 +24,14 @@
 }
 
 .bottom-header nav ul li a {
-  color: #0056b3; /* Blue text color */
+  color: #0a0b0b; /* Blue text color */
   font-weight: 600;
   padding: 12px 20px;
   display: block;
   font-size: 16px;
   transition: color 0.3s ease, background-color 0.3s ease;
   border-radius: 4px; /* Rounded corners */
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
 }
 
 .bottom-header nav ul li a:hover {
@@ -48,6 +52,7 @@
   z-index: 1000;
   text-align: left;
   padding: 12px 0;
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
 }
 
 .dropdown-content a {
@@ -58,6 +63,7 @@
   font-size: 15px;
   transition: background-color 0.3s ease, color 0.3s ease;
   border-radius: 4px;
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
 }
 
 .dropdown-content a:hover {
@@ -89,6 +95,7 @@
   z-index: 1000;
   text-align: left;
   padding: 12px 0;
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
 }
 
 .dropdown-submenu:hover .dropdown-submenu-content {
@@ -103,4 +110,5 @@
   padding: 12px 25px;
   white-space: nowrap;
   color: #0056b3;
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
 }

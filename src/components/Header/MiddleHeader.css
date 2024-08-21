@@ -1,99 +1,82 @@
-/* src/components/Header/MiddleHeader.css */
-
 .middle-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px; /* Slightly reduced padding for a balanced feel */
-  background-color: #f9f9f9; /* Light gray background for a clean look */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 10px 20px;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid #ddd;
+  background-color: rgb(39, 37, 36);
 }
 
-.middle-header .logo img {
-  height: 60px; /* Adjusted logo size for better alignment */
-  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+.logo img {
+  height: 80px;
+  width: 150px;
+  max-width: 100%;
 }
 
-.middle-header .logo img:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
-}
-
-.middle-header .search-bar {
-  flex-grow: 1;
+.timer {
   display: flex;
   align-items: center;
-  justify-content: center; /* Center the search bar */
+  background-color: rgba(255, 243, 224, 0.9); /* Slight transparency to blend with background */
+  border: 1px solid #ff9800;
+  padding: 12px 20px; /* Increased padding for a larger size */
+  border-radius: 4px;
+  font-size: 18px; /* Slightly larger font size */
+  color: #311b8b;
+  font-weight: bold;
+  margin: 0 35px 0 80px; /* Added more right margin and moved to the right */
 }
 
-.middle-header .search-bar input,
-.middle-header .search-bar button {
-  height: 44px; /* Set a fixed height for both the input and button */
-  box-sizing: border-box; /* Ensure padding is included within height/width */
+.timer-text {
+  margin-right: 12px; /* Increased margin for spacing */
 }
 
-.middle-header .search-bar input {
-  width: 100%;
-  max-width: 500px;
-  padding: 0 20px; /* Adjusted padding to maintain height */
-  border: 1px solid #ccc; /* Softer border color */
-  border-radius: 30px 0 0 30px; /* More rounded corners */
-  font-size: 16px;
-  background-color: #f7f7f7; /* Light background color */
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle inner shadow */
-  transition: all 0.3s ease; /* Smooth transition for focus effects */
-}
-
-.middle-header .search-bar input:focus {
-  border-color: #0073e6; /* Highlight border on focus */
-  background-color: #ffffff; /* Change background on focus */
-  outline: none; /* Remove default outline */
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 0 0 8px rgba(0, 115, 230, 0.2); /* Outer shadow on focus */
-}
-
-.middle-header .search-bar button {
-  padding: 0 25px; /* Adjusted padding for better alignment */
-  border: 1px solid #0073e6;
-  background-color: #0073e6;
-  color: #ffffff;
-  border-radius: 0 30px 30px 0; /* More rounded corners */
+.timer button {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Increased padding for a larger button */
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  line-height: 1; /* Ensure consistent line height */
+  font-weight: bold;
+  font-size: 16px; /* Slightly larger font size for the button text */
 }
 
-.middle-header .search-bar button svg {
-  font-size: 18px; /* Adjust icon size */
+.timer button:hover {
+  background-color: #e68900;
 }
 
-.middle-header .search-bar button:hover {
-  background-color: #005bb5; /* Darken background on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+.timer button:focus {
+  outline: none;
 }
 
-.middle-header .auth-links {
+.auth-links {
   display: flex;
   align-items: center;
 }
 
-.middle-header .auth-links a {
-  margin-left: 15px; /* Slightly reduced margin for compactness */
-  padding: 10px 25px; /* Adjusted padding for better balance */
-  border-radius: 30px; /* More rounded corners */
-  border: 1px solid #0073e6;
-  color: #0073e6;
-  font-weight: 500;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+.auth-links button {
+  background-color: white;
+  color: #311b8b;
+  border: solid #0056b3;
+  padding: 12px 24px; /* Increased padding for a larger button */
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px; /* Slightly larger font size for the button text */
+  margin-right: 12px; /* Slightly increased margin for better spacing */
 }
 
-.middle-header .auth-links a:hover {
-  background-color: #0073e6;
-  color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+.auth-links button:hover {
+  background-color: #0056b3;
+  color: white; /* Change text color on hover */
+}
+
+.auth-links button:focus {
+  outline: none;
+}
+
+.auth-links button:last-child {
+  margin-right: 0;
 }

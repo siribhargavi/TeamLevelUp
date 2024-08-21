@@ -1,35 +1,39 @@
-/* Animated background for the course catalog */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .course-catalog-preview {
   padding: 20px 20px;
-    background-color: rgba(255, 255, 255, 0.5); /* More opaque color */
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background for opacity effect */
+  background-image: url('/public/images/neural-background.jpg'); /* Add your background image path here */
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-repeat: no-repeat;
+  background-position: 0% 50%; /* Start position for animation */
+  animation: backgroundMove 30s linear infinite; /* Add animation for moving background */
   text-align: center;
   border-bottom: 1px solid #e0e0e0;
+  color: #ffffff; /* Ensure text is readable on a dark background */
 }
 
-/* Gradient animation */
-@keyframes gradientAnimation {
+/* Background moving animation */
+@keyframes backgroundMove {
   0% {
     background-position: 0% 50%;
   }
-  50% {
-    background-position: 100% 50%;
-  }
   100% {
-    background-position: 0% 50%;
+    background-position: 100% 50%;
   }
 }
 
 .course-catalog-preview h2 {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 700;
   margin-bottom: 40px;
-  color: #0056b3;
+  color: white; /* Yellow color for better contrast against the black background */
   position: relative;
   display: inline-block;
   padding-bottom: 10px;
   margin-top: -10px;
+  font-family: 'Pacifico', cursive;
+
 }
 
 .course-catalog-preview h2::after {
@@ -51,7 +55,7 @@
 }
 
 .tab-button {
-  background-color: #e9ecef;
+  background-color: #ffffff;
   border: none;
   border-radius: 30px;
   padding: 12px 25px;
@@ -80,7 +84,7 @@
 }
 
 .course-item {
-  background-color: #f9f9f9;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent to blend with the black background */
   border: 1px solid #dddddd;
   border-radius: 12px;
   overflow: hidden;
@@ -114,7 +118,7 @@
 
 .course-item p {
   font-size: 15px;
-  color: #666666;
+  color: #333333; /* Darker color for readability against lighter background */
   margin: 10px;
   line-height: 1.5;
   flex-grow: 1; /* Ensures the text expands to fill the space */

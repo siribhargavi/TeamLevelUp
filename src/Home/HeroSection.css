@@ -1,95 +1,64 @@
-/* src/components/Home/HeroSection.css */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .hero-section {
+  width: 100%;
+  height: 90px; /* Set the height to 70px */
+  background-color: #f8f9fa; /* Fallback color */
+  background-image: url('/public/images/solar-background1.avif'); /* Add your background image path here */
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px 40px; /* Adjusted padding for better balance */
-  border-bottom: 1px solid #e0e0e0;
-  color: #333333;
-}/* Container for the background squares */
-/* Ensure that .background-squares is behind but visible */
-.hero-section {
-  position: relative;
-  z-index: 0; /* Default z-index for hero-section */
-}
-
-.background-squares {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1; /* Ensure it is behind hero-section content */
-  pointer-events: none; /* Allow interaction with content above */
-}
-
-
-/* Animation for squares to appear and disappear */
-@keyframes square-fade {
-  0%, 100% {
-    opacity: 0;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.2); /* Slightly enlarge for a subtle effect */
-  }
-}
-
-.hero-image {
-  flex: 1;
-  max-width: 40%; /* Slightly narrower for better text balance */
-  margin-right: 40px; /* Increased space between image and text */
-}
-
-.hero-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 20px; /* More pronounced rounded corners */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Stronger shadow for better depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hero-image img:hover {
-  transform: scale(1.05); /* Slightly larger zoom on hover */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
+  justify-content: center;
+  align-items: center; /* Center content vertically */
+  overflow: hidden; /* Hide any overflow from animated elements */
 }
 
 .hero-content {
-  flex: 2;
-  text-align: left;
-}
-
-.hero-content h1 {
-  font-size: 36px; /* Reduced font size for headline */
-  font-weight: 700; /* Bold font for emphasis */
-  margin-bottom: 20px;
-  color: #004494;
-  line-height: 1.2; /* Tighter line height for compact look */
-}
-
-.hero-content p {
-  font-size: 18px;
-  margin-bottom: 40px;
-  color: #666666;
-  font-family: 'Cinzel', 'Playfair Display', 'Times New Roman', serif;
-}
-
-
-.cta-button {
-  padding: 15px 40px;
-  font-size: 18px;
-  background-color: #0056b3;
+  position: relative;
+  z-index: 2; /* Ensure content is above the moving background */
+  text-align: center;
   color: white;
-  border: none;
-  border-radius: 8px; /* More rounded corners for the button */
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  font-size: 18px; /* Adjust font size to fit within 70px height */
+  font-family: 'Pacifico', cursive;
+  line-height: 1; /* Ensure text line-height fits within the 70px height */
 }
 
-.cta-button:hover {
-  background-color: white;
-  transform: translateY(-3px); /* Slight lift on hover */
+/* Floating circles in the background */
+.hero-section::before,
+.hero-section::after {
+  content: '';
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white circles */
+  border-radius: 50%;
+  animation: float 10s infinite ease-in-out;
+}
+
+.hero-section::before {
+  width: 50px; /* Further reduced size of the circle */
+  height: 50px;
+  top: -15px; /* Adjusted position */
+  left: 10%;
+  animation-duration: 12s; /* Different duration for variation */
+}
+
+.hero-section::after {
+  width: 70px; /* Further reduced size of the circle */
+  height: 70px;
+  bottom: -15px; /* Adjusted position */
+  right: 15%;
+  animation-duration: 15s; /* Different duration for variation */
+}
+
+/* Keyframes for floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px); /* Further reduced floating distance */
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

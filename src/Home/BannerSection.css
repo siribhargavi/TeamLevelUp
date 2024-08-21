@@ -1,0 +1,64 @@
+.banner-section {
+    width: 100%;
+    max-width: 800px; /* Keep it within a manageable width */
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-image: url('/public/images/solar-background.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    text-align: center; /* Center text inside banner section */
+  }
+
+  .banner-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .banner-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+  }
+  
+  .banner-slide {
+    min-width: 100%; /* One banner per view */
+    box-sizing: border-box;
+    padding: 0;
+  }
+  
+  .banner-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darken on hover */
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  

@@ -3,11 +3,12 @@
 /* Testimonials Section */
 .testimonials {
   padding: 60px 20px;
-  background-color: rgb(245, 244, 236); /* Dark grey background similar to testimonials */
   text-align: center;
   position: relative; /* To contain the animated background */
   overflow: hidden; /* Hide overflow from animated elements */
   color: rgb(236, 230, 230);
+  background-color: #f4f4f4; /* Neutral background for balance */
+
 }
 
 /* Subtle Animated Background with Circles */

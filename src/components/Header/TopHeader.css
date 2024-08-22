@@ -8,14 +8,14 @@
   padding: 2px 0;
   height: 30px;
   font-size: 14px;
-  color: white;
+  color: black;
   text-align: center;
   display: flex;
   padding-left: 10px;
   align-items: center;
   justify-content: center;
   font-family: 'Poppins', sans-serif;
-  background-color: #0056b3;
+ background-image: url('/public/images/solar-background1.jpg');
 }
 
 .top-header p {

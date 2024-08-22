@@ -6,7 +6,7 @@
   background-size: cover;
   background-position: center;
   border-bottom: 1px solid #ccc; /* Softer gray border */
-  background-color: rgba(230, 244, 255, 0.9); /* Light gray background for a clean look */
+background-image: url('/public/images/solar-background.jpg');
 }
 
 .logo img {
@@ -23,7 +23,7 @@
   padding: 12px 20px;
   border-radius: 4px;
   font-size: 18px;
-  color: #0056b3; /* Darker blue text for readability */
+  color: black; /* Darker blue text for readability */
   font-weight: bold;
   margin: 0 35px 0 80px;
   font-family:'Times New Roman', Times, serif;
@@ -62,7 +62,7 @@
 
 .auth-links button {
   background-color: white;
-  color: #0056b3; /* Darker blue text */
+  color: black; /* Darker blue text */
   border: solid #007bff; /* Blue border to match the timer button */
   padding: 12px 24px;
   border-radius: 4px;

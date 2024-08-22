@@ -1,0 +1,978 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+.react-course-page {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Navigation Header */
+.nav-header {
+    background-color: #ffffff; /* White background */
+    padding: 20px 0; /* Increase padding for a larger header */
+    border-bottom: 2px solid #ddd; /* Light grey border for separation */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+}
+
+/* Navigation List */
+.nav-header nav ul {
+    display: flex;
+    justify-content: space-around; /* Spread out the items evenly */
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Navigation Items */
+.nav-header nav ul li {
+    margin: 0 15px; /* Slightly larger margin between items */
+}
+
+/* Navigation Links */
+.nav-header nav ul li a {
+    color: #0056b3; /* Dark blue text */
+    font-weight: bold; /* Make the text bold */
+    padding: 10px 10px; /* Increase padding for larger clickable area */
+    font-size: 14px; /* Increase font size for prominence */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 8px; /* Slightly rounded corners */
+    font-family:'PlayFair Display';
+}
+
+/* Hover Effect for Navigation Links */
+.nav-header nav ul li a:hover {
+    background-color: #e6f0ff; /* Light blue background on hover */
+    color: #003366; /* Darker blue text on hover */
+    font-weight: bolder; /* Slightly bolder font weight on hover */
+}
+/* Course Overview Section */
+.course-overview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; /* Pure white background for a clean look */
+    padding: 40px; /* Generous padding for spaciousness */
+    border-radius: 16px; /* Larger border radius for modern smooth edges */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+    margin-bottom: 40px; /* Margin for separation from other sections */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.course-overview:hover {
+    transform: translateY(-5px); /* Gentle lift on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow for interactivity */
+}
+
+.course-details {
+    flex: 1;
+    padding-right: 30px; /* Additional padding for better spacing */
+}
+
+.course-details h2 {
+    font-size: 32px; /* Larger font for main heading */
+    font-weight: 800; /* Strong emphasis on heading */
+    color: #0056b3; /* Darker blue for a more authoritative feel */
+    margin-bottom: 20px;
+    padding-left: 20px; /* Increased padding for better alignment */
+    letter-spacing: 0.5px; /* Slight spacing for readability */
+    position: relative; /* Position relative for the underline */
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+
+}
+
+.course-details h2::after {
+    content: '';
+    display: block;
+    width: 60px; /* Adjust width of underline */
+    height: 4px;
+    background-color: #ffeb3b; /* Yellow underline */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Center the underline */
+    bottom: -5px; /* Adjust to move underline closer or further from the text */
+    border-radius: 2px; /* Slight rounding for a smooth look */
+}
+
+
+.course-details p {
+    font-family: 'Merriweather', serif; /* A classic serif font for a more formal look */
+    font-size: 20px; /* Larger font for better readability */
+    color: #444; /* Neutral dark color for text */
+    margin-bottom: 12px;
+    line-height: 1.8; /* Spacious line height for easier reading */
+}
+
+
+
+.course-image {
+    flex: 1;
+    text-align: right;
+}
+
+.course-image img {
+    max-width: 95%; /* Slightly reduced width for better proportion */
+    height: auto;
+    border-radius: 12px; /* Rounded corners for a modern touch */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Softer shadow for a polished look */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.course-image img:hover {
+    transform: scale(1.04); /* Slight zoom effect for interactivity */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .course-overview {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px; /* Adjust padding for smaller screens */
+    }
+
+    .course-details {
+        padding-right: 0;
+        margin-bottom: 20px; /* Better spacing for smaller screens */
+    }
+
+    .course-image {
+        margin-top: 20px;
+    }
+
+    .course-image img {
+        max-width: 100%; /* Full width for smaller devices */
+    }
+}
+/* Video Learning Section */
+.video-learning {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Adding shadow for the entire section */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+    position: relative; /* Ensure the background animation is contained within the box */
+    overflow: hidden; /* Hide overflow from animated elements */
+}
+
+.video-learning:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.video-learning::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(173, 216, 230, 0.2) 0%, transparent 70%);
+    transition: transform 0.5s ease;
+    transform: scale(1);
+    z-index: 0; /* Behind the content */
+}
+
+.video-learning:hover::before {
+    transform: scale(1.3);
+}
+
+/* Section Title */
+.video-learning h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #0056b3;
+    margin-bottom: 30px;
+    font-family: 'Pacifico', cursive;
+    position: relative;
+    
+}
+
+.video-learning h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #ffeb3b;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Video Grid */
+.video-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual Video Item */
+.video-item {
+    flex: 1;
+    max-width: 480px;
+    margin-bottom: 20px;
+    background-color: white; /* Adding a white background for the box */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adding shadow to the video box */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+    position: relative; /* Ensure the background animation is contained within the box */
+    overflow: hidden;
+}
+
+.video-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.video-item::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(173, 216, 230, 0.2) 0%, transparent 70%);
+    transition: transform 0.5s ease;
+    transform: scale(1);
+    z-index: 0; /* Behind the content */
+}
+
+.video-item:hover::before {
+    transform: scale(1.3);
+}
+
+.video-item iframe {
+    width: 100%;
+    border-radius: 8px;
+    position: relative; /* Ensure the video is above the background animation */
+    z-index: 1;
+}
+
+.video-item p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 10px;
+    position: relative; /* Ensure the text is above the background animation */
+    z-index: 1;
+}
+
+/* Skills Section */
+.skills-gained {
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-bottom: 40px;
+}
+
+.skills-gained:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow for interactivity */
+}
+
+.skills-gained h2 {
+    font-size: 32px; /* Larger font for the section title */
+    font-weight: 800;
+    color: #0056b3; /* Dark blue color for professional look */
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+    font-family: 'Pacifico', cursive;
+}
+
+.skills-gained h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #ffeb3b; /* Yellow underline for emphasis */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.skills-gained ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skills-gained ul li {
+    color: #333333;
+    font-size: 18px;
+    margin: 10px;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Shadow for skill items */
+    width: calc(45% - 20px); /* Adjust width for two columns layout */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-gained ul li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .skills-gained ul li {
+        width: 100%; /* Full width for smaller screens */
+        margin: 10px 0;
+    }
+}
+
+
+/* Roadmap Section */
+.roadmap {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f4f7 100%);
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.roadmap:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.roadmap h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #0056b3;
+    margin-bottom: 25px;
+    position: relative;
+    font-family: 'Pacifico', cursive;
+}
+
+.roadmap h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #ffeb3b;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.roadmap-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.roadmap-step {
+    background: #ffffff;
+    border-left: 4px solid #ffeb3b;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.roadmap-step:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.roadmap-step h3 {
+    font-size: 24px;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.roadmap-step p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .roadmap-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .roadmap-step {
+        flex: 1;
+        margin-right: 20px;
+    }
+
+    .roadmap-step:last-child {
+        margin-right: 0;
+    }
+}
+
+/* General Styling */
+.demo-instructor-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f4f7f9;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+/* Demo Box Styling */
+.demo-container {
+    flex: 1;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+.demo-container:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow for interactivity */
+    background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%); /* Light blue and white gradient */
+}
+
+.demo-container h2 {
+    font-size: 28px;
+    color: #0056b3;
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Underline for Demo Heading */
+.demo-container h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #ffcc00; /* Yellow underline */
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.demo-container h2:hover::after {
+    width: 120px; /* Expand underline on hover */
+}
+
+.demo-container p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.demo-action-button {
+    background-color: #0056b3;
+    color: white;
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.demo-action-button:hover {
+    background-color: #004080;
+    transform: translateY(-3px);
+}
+
+/* Instructor Box Styling */
+.instructor-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.instructor-container:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow for interactivity */
+    background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%); /* Light blue and white gradient */
+}
+
+
+.instructor-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 4px solid #0056b3;
+}
+
+.instructor-info h3 {
+    font-size: 24px;
+    color: #0056b3;
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Underline for Instructor Heading */
+.instructor-info h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #ffcc00; /* Yellow underline */
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.instructor-info h3:hover::after {
+    width: 100px; /* Expand underline on hover */
+}
+
+.instructor-info p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .demo-instructor-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .demo-container, .instructor-container {
+        margin: 0 0 20px;
+    }
+
+    .instructor-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .instructor-photo {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+
+/* Curriculum Section */
+.course-curriculum {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.course-curriculum h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0056b3;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    position: relative;
+}
+
+.course-curriculum h2::after {
+    content: '';
+    display: block;
+    width: 80px; /* Adjust width of underline */
+    height: 4px;
+    background-color: #ffeb3b; /* Yellow underline */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Center the underline */
+    bottom: -10px; /* Adjust to move underline closer or further from the text */
+    border-radius: 2px; /* Slight rounding for a smooth look */
+}
+
+.curriculum-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Add gap between columns */
+}
+
+.curriculum-column {
+    flex: 1;
+    padding: 10px;
+    position: relative;
+}
+
+.curriculum-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.curriculum-list li {
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.curriculum-list li:hover {
+    background-color: #f0f4f8;
+    transform: translateX(5px); /* Add slight movement on hover */
+}
+
+.curriculum-list .module-title {
+    font-weight: bold;
+    color: #0056b3;
+    margin-bottom: 5px;
+}
+
+.subtopics-display {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    display: none;
+    position: absolute;
+    right: -320px; /* Adjusted for better alignment */
+    top: 0;
+    width: 300px; /* Slightly increased width */
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.curriculum-list li:hover .subtopics-display {
+    display: block;
+}
+
+.subtopics-display h3 {
+    font-size: 24px;
+    color: #0056b3;
+    margin-bottom: 15px;
+}
+
+.subtopics-display ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.subtopics-display ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .course-curriculum {
+        padding: 20px;
+    }
+
+    .curriculum-content {
+        flex-direction: column;
+    }
+
+    .curriculum-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .subtopics-display {
+        position: static;
+        width: auto;
+        margin-top: 20px;
+        right: 0;
+    }
+}
+
+
+/* Assessments & Interactive Features Section */
+.interactive-features {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.interactive-features h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0056b3;
+    margin-bottom: 20px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 10px;
+    font-family: 'Pacifico', cursive;
+}
+
+.interactive-features h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #ffeb3b;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.interactive-features h2:hover::after {
+    width: 100px;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.feature-box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 22%; /* Adjusted to ensure four boxes fit in one row */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-box h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0056b3;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.feature-box h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background-color: #ffeb3b;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.feature-box h3:hover::after {
+    width: 60px;
+}
+
+.feature-box p {
+    font-size: 16px;
+    color: #555;
+    
+}
+
+/* Progress Bar */
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 10px;
+    margin: 10px 0;
+}
+
+.progress {
+    background-color: #0056b3;
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* Hover Effect */
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background-color:#f0f4f8 ;
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .features-grid {
+        flex-direction: column;
+    }
+
+    .feature-box {
+        width: 100%;
+    }
+}
+/* Certification Details Section */
+.certification-details {
+    background-color: #f0f8ff; /* Light blue background */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.certification-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.certification-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.certification-text h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0056b3;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    font-family: 'Pacifico', cursive;
+}
+
+.certification-text h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #ffeb3b;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.certification-text h2:hover::after {
+    width: 100px;
+}
+
+.certification-text p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 0;
+    transition: color 0.3s ease;
+}
+
+.certification-text:hover p {
+    color: #0056b3;
+}
+
+.certification-image img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .certification-details {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .certification-text {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .certification-image img {
+        max-width: 100%;
+    }
+}
+/* Alumni Placement Section */
+.alumni-placement {
+    background-color: #f7f9fc; /* Soft background color */
+    padding: 50px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.alumni-placement h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0056b3;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #ffeb3b; /* Underline effect */
+    font-family: 'Pacifico', cursive;
+}
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.logo-grid img {
+    max-width: 100px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-grid img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+
+    .alumni-placement h2 {
+        font-size: 28px;
+    }
+}

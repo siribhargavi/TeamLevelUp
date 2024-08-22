@@ -183,22 +183,21 @@ const JavaCourse = () => {
   </div>
 </section>
 
+<section id="demo-instructor" className="demo-instructor-section">
+  <div className="demo-container">
+    <h2>Book a Demo Session</h2>
+    <p>Experience our teaching style and get a taste of what you'll learn in the course.</p>
+    <button onClick={handleBookNowClick} className="demo-action-button">Book Now</button>
+  </div>
+  <div className="instructor-container">
+    <img src="/images/react-instructor.jpg" alt="John Doe" className="instructor-photo" />
+    <div className="instructor-info">
+      <h3>John Doe</h3>
+      <p>John Doe is an experienced front-end developer with a deep understanding of React. He has over 10 years of industry experience and has taught thousands of students.</p>
+    </div>
+  </div>
+</section>
 
- {/* Mentor and Demo Section */}
- <section id="mentor-demo" className="mentor-demo-section">
-      <div className="demo-box">
-        <h2>Book a Demo Session</h2>
-        <p>Experience our teaching style and get a taste of what you'll learn in the course.</p>
-        <button onClick={handleBookNowClick} className="demo-button">Book Now</button>
-      </div>
-      <div className="mentor-box">
-        <img src="/images/react-instructor.jpg" alt="John Doe" className="mentor-image" />
-        <div className="mentor-info">
-          <h3>John Doe</h3>
-          <p>John Doe is an experienced front-end developer with a deep understanding of React. He has over 10 years of industry experience and has taught thousands of students.</p>
-        </div>
-      </div>
-    </section>
 
 
 {/* Course Curriculum Section */}

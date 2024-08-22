@@ -1,50 +1,75 @@
-import React,{useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './AIMLCourse.css';
+import { useNavigate } from 'react-router-dom';
 
 const AIMLCourse = () => {
+  const navigate = useNavigate();
+  const [subtopics, setSubtopics] = useState([]);
+  const [showSubtopics, setShowSubtopics] = useState(false);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  const handleBookNowClick = () => {
+    navigate('/book-demo');
+  };
+
   const testimonialsData = [
     {
       id: 1,
-      name: 'Emily R.',
-      title: 'Software Engineer',
-      photo: '/images/testi1.jpeg',
-      quote: 'The Bootcamp transformed my career. The instructors were top-notch, and the curriculum was spot-on.',
+      name: "Emily Johnson",
+      photo: "/images/testi1.jpeg", 
+      quote: "The course was a game-changer for me. The hands-on projects and real-world examples made complex concepts easy to understand. Highly recommended!",
     },
     {
       id: 2,
-      name: 'Michael S.',
-      title: 'Data Scientist',
-      photo: '/images/testi3.jpeg',
-      quote: 'I gained practical skills that I could immediately apply to my job. Highly recommend!',
+      name: "Michael Smith",
+      photo: "/images/testi1.jpeg", 
+      quote: "The instructors are top-notch! They not only teach you the theory but also how to apply it in the industry. This course has truly leveled up my career.",
     },
     {
       id: 3,
-      name: 'Sophia L.',
-      title: 'UI/UX Designer',
-      photo: '/images/testi3.jpeg',
-      quote: 'The hands-on projects were challenging but rewarding. I built a portfolio that landed me my dream job.',
+      name: "Samantha Brown",
+      photo: "/images/testi1.jpeg", 
+      quote: "I was able to transition into a new role thanks to the skills I gained here. The support from the community and mentors is invaluable.",
+    },
+    {
+      id: 4,
+      name: "David Lee",
+      photo: "/images/testi1.jpeg", 
+      quote: "This is the best course I've taken online. The content is up-to-date, and the projects are relevant to what is currently being used in the industry.",
+    },
+    {
+      id: 5,
+      name: "Sarah Thompson",
+      photo: "/images/testi1.jpeg", 
+      quote: "The practical approach of the course, combined with expert guidance, has given me the confidence to tackle complex challenges at work.",
     },
   ];
+  const handleNavClick = (event, sectionId) => {
+    event.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleMouseEnter = (event) => {
+    const subtopicsData = event.currentTarget.getAttribute('data-subtopics');
+    if (subtopicsData) {
+      setSubtopics(subtopicsData.split(','));
+      setShowSubtopics(true);
+      const rect = event.currentTarget.getBoundingClientRect();
+      setPosition({ x: rect.right + 10, y: rect.top });
+    } else {
+      setSubtopics([]);
+      setShowSubtopics(false);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setShowSubtopics(false);
+  };
   useEffect(() => {
-    const items = document.querySelectorAll('.curriculum-list li');
-    const subtopicsDisplay = document.querySelector('.subtopics-display');
-
-    const handleMouseEnter = (event) => {
-      const subtopics = event.target.getAttribute('data-subtopics').split(',');
-      subtopicsDisplay.classList.add('active');
-      subtopicsDisplay.innerHTML = `
-        <h3>Subtopics</h3>
-        <ul>
-          ${subtopics.map((subtopic) => `<li>${subtopic}</li>`).join('')}
-        </ul>
-      `;
-    };
-
-    const handleMouseLeave = () => {
-      subtopicsDisplay.classList.remove('active');
-      subtopicsDisplay.innerHTML = '';
-    };
-
+    const items = document.querySelectorAll('.curriculum-item');
     items.forEach((item) => {
       item.addEventListener('mouseenter', handleMouseEnter);
       item.addEventListener('mouseleave', handleMouseLeave);
@@ -59,26 +84,26 @@ const AIMLCourse = () => {
   }, []);
   return (
     <div className="react-course-page">
-      {/* Header Section */}
-      <header className="header">
-       
+       {/* Header Section */}
+       <header className="header">
         <div className="nav-header">
           <nav>
             <ul>
-              <li><a href="#overview">Overview</a></li>
-              <li><a href="#course-details">Course Details</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#roadmap">Roadmap to Success</a></li>
-              <li><a href="#mentor">Mentor</a></li>
-              <li><a href="#curriculum">Curriculum</a></li>
-              <li><a href="#interactive-features">Interactive Features</a></li>
-              <li><a href="#certification">Certification</a></li>
-              <li><a href="#testimonials">Testimonials</a></li>
-              <li><a href="#alumni">Alumni's Placed</a></li>
+              <li><a href="#overview" onClick={(e) => handleNavClick(e, 'overview')}>Overview</a></li>
+              <li><a href="#course-details" onClick={(e) => handleNavClick(e, 'course-details')}>Course Details</a></li>
+              <li><a href="#skills" onClick={(e) => handleNavClick(e, 'skills')}>Skills</a></li>
+              <li><a href="#roadmap" onClick={(e) => handleNavClick(e, 'roadmap')}>Roadmap to Success</a></li>
+              <li><a href="#mentor" onClick={(e) => handleNavClick(e, 'mentor-demo')}>Mentor</a></li>
+              <li><a href="#curriculum" onClick={(e) => handleNavClick(e, 'curriculum')}>Curriculum</a></li>
+              <li><a href="#interactive-features" onClick={(e) => handleNavClick(e, 'interactive-features')}>Interactive Features</a></li>
+              <li><a href="#certification" onClick={(e) => handleNavClick(e, 'certification')}>Certification</a></li>
+              <li><a href="#testimonials" onClick={(e) => handleNavClick(e, 'testimonials')}>Testimonials</a></li>
+              <li><a href="#alumni" onClick={(e) => handleNavClick(e, 'alumni')}>Alumni's Placed</a></li>
             </ul>
           </nav>
         </div>
       </header>
+
 
       {/* Course Overview Section */}
       <section id="overview" className="course-overview">
@@ -93,6 +118,24 @@ const AIMLCourse = () => {
           <img src="/images/react-banner.png" alt="Course" />
         </div>
       </section>
+
+ {/* Video Learning Section */}
+ <section class="video-learning">
+    <h2>Explore and Learn</h2>
+    <div class="video-container">
+        <div class="video-grid">
+            <div class="video-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dGcsHMXbSOA" title="React JS Crash Course" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>React JS Crash Course</p>
+            </div>
+            <div class="video-item">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/yfoY53QXEnI" title="CSS Crash Course For Absolute Beginners" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>CSS Crash Course For Absolute Beginners</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
      {/* Skills You Will Gain Section */}
 <section id="skills" className="skills-gained">
@@ -136,21 +179,21 @@ const AIMLCourse = () => {
 </section>
 
 
- {/* Mentor and Demo Section */}
-<section id="mentor-demo" className="mentor-demo-section">
-  <div className="demo-box">
+<section id="demo-instructor" className="demo-instructor-section">
+  <div className="demo-container">
     <h2>Book a Demo Session</h2>
     <p>Experience our teaching style and get a taste of what you'll learn in the course.</p>
-    <button className="demo-button">Book Now</button>
+    <button onClick={handleBookNowClick} className="demo-action-button">Book Now</button>
   </div>
-  <div className="mentor-box">
-    <img src="/images/react-instructor.jpg" alt="John Doe" className="mentor-image" />
-    <div className="mentor-info">
-      <h3>Dr. Mani</h3>
-      <p>Dr. Mani is a renowned AI and machine learning expert with extensive research and industry experience. He holds a PhD in Computer Science and has authored numerous publications in top-tier academic journals. With a passion for teaching, Dr.Mani has mentored countless students and professionals in their AI and ML journey.</p>
+  <div className="instructor-container">
+    <img src="/images/react-instructor.jpg" alt="John Doe" className="instructor-photo" />
+    <div className="instructor-info">
+      <h3>John Doe</h3>
+      <p>John Doe is an experienced front-end developer with a deep understanding of React. He has over 10 years of industry experience and has taught thousands of students.</p>
     </div>
   </div>
 </section>
+
 
 {/* Course Curriculum Section */}
 <section id="curriculum" className="course-curriculum">
@@ -215,34 +258,33 @@ const AIMLCourse = () => {
         <div className="feature-box">
             <h3>Assignments</h3>
             <div className="progress-bar">
-                <div className="progress" style={{ width: '85%' }}></div>
+                <div className="progress" style={{ width: '0%' }}></div>
             </div>
-            <p>85% Completed</p>
+            <p>0% Completed</p>
         </div>
         <div className="feature-box">
             <h3>Quizzes</h3>
             <div className="progress-bar">
-                <div className="progress" style={{ width: '60%' }}></div>
+                <div className="progress" style={{ width: '0%' }}></div>
             </div>
-            <p>60% Completed</p>
+            <p>0% Completed</p>
         </div>
         <div className="feature-box">
             <h3>Discussion Forums</h3>
             <div className="progress-bar">
-                <div className="progress" style={{ width: '75%' }}></div>
+                <div className="progress" style={{ width: '0%' }}></div>
             </div>
-            <p>75% Participated</p>
+            <p>0% Participated</p>
         </div>
         <div className="feature-box">
             <h3>Peer Reviews</h3>
             <div className="progress-bar">
-                <div className="progress" style={{ width: '90%' }}></div>
+                <div className="progress" style={{ width: '0%' }}></div>
             </div>
-            <p>90% Reviewed</p>
+            <p>0% Reviewed</p>
         </div>
     </div>
 </section>
-
 
      {/* Certification Details Section */}
 <section id="certification" className="certification-details">

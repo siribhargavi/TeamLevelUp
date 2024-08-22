@@ -124,7 +124,7 @@
 
 /* Back Face Styling */
 .feature-card-back {
-  background-color: lightslategray; /* Dark blue for the back face */
+  background-color: #ede7e7; /* Dark blue for the back face */
   color: #ffffff;
   transform: rotateY(180deg);
 }

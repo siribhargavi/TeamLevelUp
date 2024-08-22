@@ -20,7 +20,7 @@ overflow: hidden;
 color: rgb(236, 230, 230);
 border-bottom: 1px solid #444;
 background-color: #efefef; /* Light blue background */
-background: linear-gradient(-45deg, #ffffff, #004080, #ffffff, #004080);
+background: linear-gradient(-45deg, #ffffff, #7199c1, #ffffff, #004080);
 background-size: 400% 400%;
 animation: moveGradient 15s ease infinite;
 }

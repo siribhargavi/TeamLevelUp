@@ -13,21 +13,21 @@ const courses = {
   BootCamps: [
     {
       id:1,
-      img: '/images/react-bootcamp.jpg',
+      img: '/images/react-banner.png',
       title: 'React Bootcamp',
       description: 'Master React.js and build dynamic web applications with hands-on projects.',
       link: '/courses/react',
     },
     {
       id:2,
-      img: '/images/java-bootcamp.jpg',
+      img: '/images/java-banner.jpg',
       title: 'Java Bootcamp',
       description: 'Become a Java expert with comprehensive training and real-world projects.',
       link: '/courses/java',
     },
     {
       id:3,
-      img: '/images/python-bootcamp.jpg',
+      img: '/images/python.jpg',
       title: 'Python Bootcamp',
       description: 'Learn Python from the ground up and develop versatile coding skills.',
       link: '/courses/python',
@@ -69,7 +69,7 @@ const courses = {
     },
     {
       id:9,
-      img: '/images/ui-ux-bootcamp.jpg',
+      img: '/public/images/web-development.jpg',
       title: 'UI/UX Design Bootcamp',
       description: 'Learn the principles of user interface and user experience design.',
       link: '/courses/ui-ux',

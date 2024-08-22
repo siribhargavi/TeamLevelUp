@@ -3,7 +3,7 @@
 /* Testimonials Section */
 .testimonials {
   padding: 60px 20px;
-  background-color: rgb(25, 28, 32); /* Dark grey background similar to testimonials */
+  background-color: rgb(245, 244, 236); /* Dark grey background similar to testimonials */
   text-align: center;
   position: relative; /* To contain the animated background */
   overflow: hidden; /* Hide overflow from animated elements */
@@ -40,12 +40,13 @@
 .testimonials h2 {
   font-size: 38px;
   font-weight: 400;
-  color: whitesmoke;
+  color: #0056b3;
   margin-bottom: 40px;
   font-family: 'Pacifico', cursive;
   position: relative;
   display: inline-block;
   padding-bottom: 10px;
+  margin-bottom:50px;
 }
 
 .testimonials h2::after {
@@ -56,7 +57,7 @@
   transform: translateX(-50%);
   width: 60px;
   height: 4px;
-  background-color:white; /* White color for the underline */
+  background-color:#ffcc00; /* White color for the underline */
   border-radius: 2px;
 }
 
@@ -69,7 +70,7 @@
 
 /* Individual Testimonial Card */
 .testimonial-card {
-  background-color: whitesmoke; /* Lighter gray for the card background */
+  background-color: #f0f8ff; /* Light blue background for course item */
   padding: 20px;
   border-radius: 10px;
   border: 2px solid white;

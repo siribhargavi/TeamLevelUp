@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&display=swap');
 
 .cycling-word {
-  color: white; /* Softer white for a more subtle contrast */
+  color: 0056b3; /* Softer white for a more subtle contrast */
   font-weight: 700;
   font-size: 28px; /* Slightly larger font size for emphasis */
   font-family: 'Great Vibes', cursive; /* Elegant cursive font */

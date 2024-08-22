@@ -6,19 +6,19 @@
   background-size: cover;
   background-position: center;
   border-bottom: 1px solid #ccc; /* Softer gray border */
-  background-color: #150909; /* Light gray background for a clean look */
+  background-color: rgba(230, 244, 255, 0.9); /* Light gray background for a clean look */
 }
 
 .logo img {
   height: 80px;
-  width: 150px;
+  width: 200px;
   max-width: 100%;
 }
 
 .timer {
   display: flex;
   align-items: center;
-  background-color: rgba(230, 244, 255, 0.9); /* Light blue background for better contrast */
+  background-color: white; /* Light blue background for better contrast */
   border: 1px solid #007bff; /* Blue border for better alignment with the color scheme */
   padding: 12px 20px;
   border-radius: 4px;
@@ -26,6 +26,8 @@
   color: #0056b3; /* Darker blue text for readability */
   font-weight: bold;
   margin: 0 35px 0 80px;
+  font-family:'Times New Roman', Times, serif;
+
 }
 
 .timer-text {
@@ -41,6 +43,8 @@
   cursor: pointer;
   font-weight: bold;
   font-size: 16px;
+  font-family:'Times New Roman', Times, serif;
+
 }
 
 .timer button:hover {
@@ -66,6 +70,8 @@
   font-weight: bold;
   font-size: 16px;
   margin-right: 12px;
+  font-family:'Times New Roman', Times, serif;
+
 }
 
 .auth-links button:hover {

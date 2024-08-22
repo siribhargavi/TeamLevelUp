@@ -12,7 +12,7 @@ const Certifications = () => {
     },
     {
       id: 2,
-      title: 'Advanced React Certification',
+      title: 'Advanced Java Certification',
       description: 'Demonstrate your advanced knowledge in React with this certification, focusing on state management, hooks, and performance optimization.',
       image: '/images/advanced-react-certificate.png',
       date: 'Issued: October 15, 2024'

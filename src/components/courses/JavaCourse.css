@@ -142,6 +142,122 @@
     }
 }
 
+/* Video Learning Section */
+.video-learning {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Adding shadow for the entire section */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+    position: relative; /* Ensure the background animation is contained within the box */
+    overflow: hidden; /* Hide overflow from animated elements */
+}
+
+.video-learning:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.video-learning::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(173, 216, 230, 0.2) 0%, transparent 70%);
+    transition: transform 0.5s ease;
+    transform: scale(1);
+    z-index: 0; /* Behind the content */
+}
+
+.video-learning:hover::before {
+    transform: scale(1.3);
+}
+
+/* Section Title */
+.video-learning h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #0056b3;
+    margin-bottom: 30px;
+    font-family: 'Pacifico', cursive;
+    position: relative;
+    
+}
+
+.video-learning h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #ffeb3b;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Video Grid */
+.video-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual Video Item */
+.video-item {
+    flex: 1;
+    max-width: 480px;
+    margin-bottom: 20px;
+    background-color: white; /* Adding a white background for the box */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adding shadow to the video box */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+    position: relative; /* Ensure the background animation is contained within the box */
+    overflow: hidden;
+}
+
+.video-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.video-item::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(173, 216, 230, 0.2) 0%, transparent 70%);
+    transition: transform 0.5s ease;
+    transform: scale(1);
+    z-index: 0; /* Behind the content */
+}
+
+.video-item:hover::before {
+    transform: scale(1.3);
+}
+
+.video-item iframe {
+    width: 100%;
+    border-radius: 8px;
+    position: relative; /* Ensure the video is above the background animation */
+    z-index: 1;
+}
+
+.video-item p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 10px;
+    position: relative; /* Ensure the text is above the background animation */
+    z-index: 1;
+}
+
 /* Skills Section */
 .skills-gained {
     background: linear-gradient(135deg, #ffffff 0%, #f0f4f7 100%); /* Subtle gradient background */
@@ -323,6 +439,7 @@
     color: #004080;
     margin-bottom: 15px;
     position: relative;
+    font-family: 'Pacifico', cursive;
 }
 
 .demo-box h2::after {
@@ -385,6 +502,7 @@
     font-weight: 600;
     color: #004080;
     margin-bottom: 8px;
+    font-family: 'Pacifico', cursive;
 }
 
 .mentor-info p {

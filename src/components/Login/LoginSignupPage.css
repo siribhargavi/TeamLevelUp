@@ -1,0 +1,112 @@
+/* Background Image */
+.login-signup-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-image: url('/public/images/login-background.jpeg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Form Container Styling */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.85); /* Increased transparency for a softer look */
+    padding: 30px 40px 40px 40px; /* Reduced top padding to move content up */
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25); /* Enhanced shadow for more depth */
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    backdrop-filter: blur(12px); /* Slightly increased blur for more focus on the form */
+    z-index: 1;
+}
+
+.form-container h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #004080; /* Adjusted to a slightly darker blue for better contrast */
+    margin-bottom: 50px; /* Reduced bottom margin to move heading closer to the top */
+    font-family: 'Pacifico', cursive;
+    position: relative;
+}
+
+.form-container h2::after {
+    content: '';
+    display: block;
+    width: 60%; /* Adjust the width to control the length of the underline */
+    height: 3px;
+    background-color: #ffcc00; /* Same color as the heading */
+    margin: 8px auto 0; /* Center the underline and add space between heading and line */
+    border-radius: 2px; /* Optional: make the line slightly rounded */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    font-family: 'Open Sans', sans-serif; /* Changed font-family for general labels */
+
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #bbb; /* Lightened border for a smoother look */
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #004080; /* Match border focus color with header color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Softer shadow on focus */
+    outline: none;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px 24px;
+    background-color: #004080; /* Darker blue for stronger visual impact */
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+}
+
+.submit-button:hover {
+    background-color: #003060; /* Darkened hover state for contrast */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    color: #004080; /* Consistent color with header and input focus */
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 20px;
+    transition: color 0.3s ease;
+}
+
+.toggle-button:hover {
+    color: #003060; /* Darkened hover state for consistency */
+}

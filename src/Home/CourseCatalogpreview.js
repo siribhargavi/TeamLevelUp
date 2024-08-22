@@ -1,18 +1,31 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
+import { useNavigate } from 'react-router-dom';
 import './CourseCatalogPreview.css';
 
 const CourseCatalogPreview = ({ courses }) => {
   const [activeCategory, setActiveCategory] = useState('BootCamps');
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const handleLearnMoreClick = (courseName) => {
-    navigate(`/course/${courseName}`); // Navigate to the respective course page
+    navigate(`/courses/${courseName}`);
+  };
+
+  const courseTitleToRouteMap = {
+    'React Bootcamp': 'react',
+    'Python Bootcamp': 'python',
+    'Cloud Computing Bootcamp': 'cloud-computing',
+    'Cyber Security Bootcamp': 'cyber-security',
+    'Data Engineering Bootcamp': 'data-engineering',
+    'Data Science Bootcamp': 'data-science',
+    'Java Bootcamp': 'java',
+    'UI/UX Design Bootcamp': 'ui-ux',
+    'AI & ML Bootcamp': 'ai-ml',
+    'Blockchain Bootcamp': 'blockchain',
+    // Add all other course mappings here
   };
 
   const mapCourseNameToRoute = (courseTitle) => {
-    // Convert course titles to their respective routes
-    return courseTitle.toLowerCase().replace(/ /g, '-'); // Example: "Data Science" -> "data-science"
+    return courseTitleToRouteMap[courseTitle] || courseTitle.toLowerCase().replace(/ /g, '-');
   };
 
   return (

@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './MiddleHeader.css';
 
 const MiddleHeader = () => {
+  const navigate = useNavigate();
+
+
+  const handleProfileClick = () => {
+    navigate('/profile');
+  };
   const calculateTimeLeft = () => {
     const offerDate = new Date("2024-09-01T00:00:00"); // Set your offer date here
     const currentTime = new Date();
@@ -48,7 +55,7 @@ const MiddleHeader = () => {
             <span>Offer on Java with AI Course is Live Now!</span>
           )}
         </div>
-        <button type="button" onClick={() => alert('Offer Details')}>
+        <button type="button" onClick={() => navigate('/book-demo')}>
           Get Offer
         </button>
       </div>
@@ -56,9 +63,9 @@ const MiddleHeader = () => {
         <button type="button" onClick={() => window.location.href = '/login-signup'}>
           Login/Register
         </button>
-        <button type="button" className="profile-button">
-          Profile
-        </button>
+        <button type="button" className="profile-button" onClick={handleProfileClick}>
+      Profile
+    </button>
       </div>
     </div>
   );

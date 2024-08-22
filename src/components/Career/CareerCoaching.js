@@ -44,7 +44,16 @@ function CareerCoaching() {
             <li>Ongoing Support and Guidance</li>
           </ul>
           <p>Our coaches are dedicated to helping you identify and achieve your career goals through personalized coaching and actionable strategies.</p>
-          <a href="/career/career-coaching" className="btn">Start Your Journey</a>
+          <a href="/career/career-coaching"  className="btn"
+    style={{
+        padding: '10px 20px',
+        fontSize: '16px',
+        borderRadius: '8px',
+        backgroundColor: '#0056b3',
+        color: 'white',
+        border: 'none',
+        cursor: 'pointer'
+    }}>Start Your Journey</a>
         </div>
         <div className="career-coaching-image">
           <img src='/images/career-coaching.jpeg' alt="Career Coaching" />

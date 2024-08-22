@@ -5,8 +5,8 @@
   padding: 10px 20px;
   background-size: cover;
   background-position: center;
-  border-bottom: 1px solid #ddd;
-  background-color: rgb(39, 37, 36);
+  border-bottom: 1px solid #ccc; /* Softer gray border */
+  background-color: #150909; /* Light gray background for a clean look */
 }
 
 .logo img {
@@ -18,33 +18,33 @@
 .timer {
   display: flex;
   align-items: center;
-  background-color: rgba(255, 243, 224, 0.9); /* Slight transparency to blend with background */
-  border: 1px solid #ff9800;
-  padding: 12px 20px; /* Increased padding for a larger size */
+  background-color: rgba(230, 244, 255, 0.9); /* Light blue background for better contrast */
+  border: 1px solid #007bff; /* Blue border for better alignment with the color scheme */
+  padding: 12px 20px;
   border-radius: 4px;
-  font-size: 18px; /* Slightly larger font size */
-  color: #311b8b;
+  font-size: 18px;
+  color: #0056b3; /* Darker blue text for readability */
   font-weight: bold;
-  margin: 0 35px 0 80px; /* Added more right margin and moved to the right */
+  margin: 0 35px 0 80px;
 }
 
 .timer-text {
-  margin-right: 12px; /* Increased margin for spacing */
+  margin-right: 12px;
 }
 
 .timer button {
-  background-color: #0056b3;
+  background-color: #007bff; /* Brighter blue for the button */
   color: white;
   border: none;
-  padding: 10px 20px; /* Increased padding for a larger button */
+  padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
-  font-size: 16px; /* Slightly larger font size for the button text */
+  font-size: 16px;
 }
 
 .timer button:hover {
-  background-color: #e68900;
+  background-color: #0056b3; /* Darker blue on hover */
 }
 
 .timer button:focus {
@@ -58,19 +58,19 @@
 
 .auth-links button {
   background-color: white;
-  color: #311b8b;
-  border: solid #0056b3;
-  padding: 12px 24px; /* Increased padding for a larger button */
+  color: #0056b3; /* Darker blue text */
+  border: solid #007bff; /* Blue border to match the timer button */
+  padding: 12px 24px;
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
-  font-size: 16px; /* Slightly larger font size for the button text */
-  margin-right: 12px; /* Slightly increased margin for better spacing */
+  font-size: 16px;
+  margin-right: 12px;
 }
 
 .auth-links button:hover {
-  background-color: #0056b3;
-  color: white; /* Change text color on hover */
+  background-color: #007bff; /* Match hover color with timer button */
+  color: white;
 }
 
 .auth-links button:focus {

@@ -1,0 +1,259 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Profile Page Background Animation */
+.profile-page-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(173, 216, 230, 0.2) 0%, transparent 70%);
+    animation: rotateBackground 10s linear infinite;
+    z-index: -1;
+    transform-origin: center;
+}
+
+/* Animation Keyframes */
+@keyframes rotateBackground {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Profile Page Container */
+.profile-page-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Profile Header */
+.profile-header {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border: 5px solid #3498db;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-picture:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.profile-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.profile-header p {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+/* Rank Badge Styling */
+.rank-badge {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: #ffffff;
+    border-radius: 25px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.rank-badge:hover {
+    background-color: #27ae60;
+    transform: translateY(-3px);
+}
+
+/* Profile Completeness */
+.profile-completeness {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 10px;
+    margin-top: 10px;
+}
+
+.progress {
+    background-color: #3498db;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #3498db;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #2980b9;
+}
+
+/* Profile Content */
+.profile-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.profile-section {
+    background-color: #f9fafc;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.profile-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2980b9;
+    margin-bottom: 20px;
+    border-left: 5px solid #2980b9;
+    padding-left: 15px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.profile-section h2::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background-color: #3498db;
+    display: block;
+    margin: 8px 0 0;
+    border-radius: 2px;
+}
+
+.profile-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-section ul li {
+    font-size: 16px;
+    color: #34495e;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.profile-section ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #3498db;
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* Badges */
+.badges-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.badge {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.badge:hover {
+    transform: scale(1.08);
+    background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-page-container {
+        padding: 20px;
+    }
+
+    .profile-header h1 {
+        font-size: 28px;
+    }
+
+    .profile-header p {
+        font-size: 16px;
+    }
+
+    .profile-section h2 {
+        font-size: 20px;
+    }
+
+    .profile-section ul li {
+        font-size: 14px;
+    }
+
+    .badges-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}

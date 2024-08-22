@@ -97,24 +97,25 @@
     color: #555555;
     margin-bottom: 20px;
 }
-
-.resume-building-text .btn {
+.resume-building-container .resume-building-text .btn {
     display: inline-block;
-    padding: 15px 40px;
-    font-size: 18px;
+    padding: 10px 20px; /* Adjusted padding */
+    font-size: 16px; /* Adjusted font size */
     background-color: #0056b3;
     color: white;
     border: none;
-    border-radius: 12px;
+    border-radius: 8px; /* Adjusted border radius */
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjusted box-shadow */
+    text-align: center;
 }
 
-.resume-building-text .btn:hover {
-    background-color: #004494;
-    transform: translateY(-3px);
+.resume-building-container .resume-building-text .btn:hover {
+    background-color: #004080; /* Darker background on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
 }
+
 
 .resume-building-image {
     flex: 1;

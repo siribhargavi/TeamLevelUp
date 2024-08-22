@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
 import './ResumeBuilding.css';
+import { useNavigate } from 'react-router-dom';
+
 
 function ResumeBuilding() {
   const [activeQuestion, setActiveQuestion] = useState(null);
+  const navigate = useNavigate();
+
+  const handleGetStartedClick = () => {
+    navigate('/resume-maker');
+  };
+  
 
   const questions = [
     {
@@ -44,8 +52,17 @@ function ResumeBuilding() {
             <li>ATS Optimization</li>
           </ul>
           <p>We understand what employers are looking for. Whether you're a recent graduate or a seasoned professional, our services are tailored to meet your needs.</p>
-          <a href="/career/resume-building" className="btn">Get Started</a>
-        </div>
+          <button onClick={handleGetStartedClick}  className="btn"
+    style={{
+        padding: '10px 20px',
+        fontSize: '16px',
+        borderRadius: '8px',
+        backgroundColor: '#0056b3',
+        color: 'white',
+        border: 'none',
+        cursor: 'pointer'
+    }}>Get Started</button>
+          </div>
         <div className="resume-building-image">
           <img src='/images/resume.png' alt="Resume Building" />
         </div>

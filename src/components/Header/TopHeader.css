@@ -1,31 +1,36 @@
-/* src/components/Header/TopHeader.css */
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap');
+
+/* Top Header */
 .top-header {
-  background-image: url('/public/images/solar-background1.jpg'); /* Add your background image path here */
-  padding: 2px 0; /* Added some padding for better spacing */
-  height: 30px; /* Slightly increased height for better readability */
+  background-image: url('/public/images/solar-background1.jpg');
+  padding: 2px 0;
+  height: 30px;
   font-size: 14px;
-  color: black; /* Ensure text color is black for contrast */
-  text-align: center; /* Center-align the text */
+  color: black;
+  text-align: center;
   display: flex;
-  padding-left: 10px; /* Move content a bit to the left */
-  align-items: center; /* Vertically center the content */
-  justify-content: center; /* Center the content horizontally */
-  font-family: 'Poppins', sans-serif; /* Use a clean, modern font */
+  padding-left: 10px;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 .top-header p {
-  margin: 0; /* Remove default margin */
-  letter-spacing: 0.5px; /* Add slight letter spacing for readability */
-  font-weight: bold; /* Lighten the font weight for a more elegant look */
+  margin: 0;
+  letter-spacing: 0.5px;
+  font-weight: bold;
 }
 
 .top-header a {
-  color: #ffcc00; /* Highlight any links with a bright color */
-  text-decoration: none; /* Remove underline from links */
-  margin-left: 3px; /* Add space before any links */
-  transition: color 0.3s ease; /* Smooth color transition */
+  color: #ffcc00;
+  text-decoration: none;
+  margin-left: 3px;
+  transition: color 0.3s ease;
 }
 
 .top-header a:hover {
-  color: #ffffff; /* Change link color on hover */
+  color: #ffffff;
 }

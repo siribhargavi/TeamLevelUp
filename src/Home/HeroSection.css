@@ -1,27 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap');
+
+/* Hero Section */
 .hero-section {
   width: 100%;
-  height: 90px; /* Set the height to 70px */
-  background-color: #f8f9fa; /* Fallback color */
-  background-image: url('/public/images/solar-background1.avif'); /* Add your background image path here */
-  background-size: cover; /* Ensure the image covers the entire section */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  height: 90px;
+  background-color: #1f2222;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
-  align-items: center; /* Center content vertically */
-  overflow: hidden; /* Hide any overflow from animated elements */
+  align-items: center;
+  overflow: hidden;
 }
 
 .hero-content {
   position: relative;
-  z-index: 2; /* Ensure content is above the moving background */
+  z-index: 2;
   text-align: center;
-  color: white;
-  font-size: 18px; /* Adjust font size to fit within 70px height */
+  color: #0056b3;
+  font-size: 18px;
   font-family: 'Pacifico', cursive;
-  line-height: 1; /* Ensure text line-height fits within the 70px height */
+  line-height: 1;
 }
 
 /* Floating circles in the background */
@@ -29,34 +34,33 @@
 .hero-section::after {
   content: '';
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white circles */
+  background-color: rgba(0, 86, 179, 0.2);
   border-radius: 50%;
   animation: float 10s infinite ease-in-out;
 }
 
 .hero-section::before {
-  width: 50px; /* Further reduced size of the circle */
+  width: 50px;
   height: 50px;
-  top: -15px; /* Adjusted position */
+  top: -15px;
   left: 10%;
-  animation-duration: 12s; /* Different duration for variation */
+  animation-duration: 12s;
 }
 
 .hero-section::after {
-  width: 70px; /* Further reduced size of the circle */
+  width: 70px;
   height: 70px;
-  bottom: -15px; /* Adjusted position */
+  bottom: -15px;
   right: 15%;
-  animation-duration: 15s; /* Different duration for variation */
+  animation-duration: 15s;
 }
 
-/* Keyframes for floating animation */
 @keyframes float {
   0% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-5px); /* Further reduced floating distance */
+    transform: translateY(-5px);
   }
   100% {
     transform: translateY(0);

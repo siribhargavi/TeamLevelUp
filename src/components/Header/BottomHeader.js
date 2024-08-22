@@ -19,6 +19,8 @@ const BottomHeader = () => {
         <a href="/courses/react">React</a>
         <a href="/courses/java">Java</a>
         <a href="/courses/python">Python</a>
+        <a href="/courses/aws">AWS Fundamentals</a>
+        <a href="/courses/data-science">Data Science Basics</a>
       </div>
     </div>
 
@@ -30,7 +32,10 @@ const BottomHeader = () => {
         <a href="/courses/frontend-development">Frontend Development</a>
         <a href="/courses/python-fullstack">Python Fullstack Development</a>
         <a href="/courses/data-science">Data Science</a>
-        <a href="/courses/aws">AWS</a>
+        <a href="/courses/cloud-computing">Cloud Computing Bundle</a>
+        <a href="/courses/devops">DevOps Essentials</a>
+        <a href="/courses/fullstack-js">Fullstack JavaScript</a>
+        <a href="/courses/cyber-security-bundle">Cyber Security Professional</a>
       </div>
     </div>
 
@@ -48,6 +53,12 @@ const BottomHeader = () => {
         <a href="/courses/cyber-security">Cyber Security</a>
         <a href="/courses/ui-ux">UI/UX Design</a>
         <a href="/courses/blockchain">Blockchain</a>
+        <a href="/courses/docker-kubernetes">Docker & Kubernetes</a>
+        <a href="/courses/ethical-hacking">Ethical Hacking</a>
+        <a href="/courses/microservices">Microservices Architecture</a>
+        <a href="/courses/agile-methodologies">Agile Methodologies</a>
+        <a href="/courses/sql-databases">SQL Databases</a>
+        <a href="/courses/angular">Angular</a>
       </div>
     </div>
 
@@ -55,10 +66,12 @@ const BottomHeader = () => {
     <div className="dropdown-submenu">
       <a href="#">Offer Courses</a>
       <div className="dropdown-submenu-content">
-        <a href="/courses/offer-1">Course 1</a>
-        <a href="/courses/offer-2">Course 2</a>
-        <a href="/courses/offer-3">Course 3</a>
-        <a href="/courses/offer-4">Course 4</a>
+        <a href="/courses/offer-1">Cloud Computing Essentials</a>
+        <a href="/courses/offer-2">Introduction to Python</a>
+        <a href="/courses/offer-3">Java Programming Basics</a>
+        <a href="/courses/offer-4">AI & Machine Learning</a>
+        <a href="/courses/offer-5">Data Science Bootcamp</a>
+        <a href="/courses/offer-6">Frontend Web Development</a>
       </div>
     </div>
     
@@ -67,14 +80,13 @@ const BottomHeader = () => {
 
 
 
+
           {/* Features Dropdown */}
           <li className="dropdown">
             <a href="#">Features</a>
             <div className="dropdown-content">
               <a href="/features/interactive-learning">Interactive Learning</a>
-              <a href="/features/ai-personalization">AI Personalization</a>
               <a href="/features/hands-on-labs">Hands-On Labs</a>
-              <a href="/features/gamification">Gamification</a>
               <a href="/features/live-sessions">Live Sessions</a>
               <a href="/features/certifications">Certifications</a>
               <a href="/features/multi-language-support">Multi-language Support</a>
@@ -102,7 +114,6 @@ const BottomHeader = () => {
               <a href="/community/events">Events</a>
               <a href="/community/mentorship">Mentorship</a>
               <a href="/community/student-network">Student Network</a>
-              <a href="/community/alumni-network">Alumni Network</a>
             </div>
           </li>
 

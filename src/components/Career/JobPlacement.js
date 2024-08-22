@@ -44,7 +44,16 @@ function JobPlacement() {
             <li>Networking Opportunities</li>
           </ul>
           <p>We work closely with you to understand your career goals and match you with job opportunities that fit your skills and aspirations.</p>
-          <a href="/career/job-placement" className="btn">Get Started</a>
+          <a href="/career/job-placement"  className="btn"
+    style={{
+        padding: '10px 20px',
+        fontSize: '16px',
+        borderRadius: '8px',
+        backgroundColor: '#0056b3',
+        color: 'white',
+        border: 'none',
+        cursor: 'pointer'
+    }}>Get Started</a>
         </div>
         <div className="job-placement-image">
           <img src='/images/job-placement.jpg' alt="Job Placement" />

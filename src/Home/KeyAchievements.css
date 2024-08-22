@@ -11,7 +11,7 @@
 
 .achievement-item {
     flex: 1;
-    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background for items */
+    background-color: white ; /* Semi-transparent background for items */
     border: 1px solid rgba(255, 255, 255, 0.4); /* Semi-transparent border */
     border-radius: 10px;
     padding: 15px;

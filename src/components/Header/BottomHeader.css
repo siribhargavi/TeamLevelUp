@@ -1,12 +1,15 @@
+/* Bottom Header */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap');
 
 .bottom-header {
-  background-color: #ffffff; /* White background for the main header */
+  background-color: #ffffff;
   padding: 12px 25px;
-  border-bottom: 1px solid #e0e0e0; /* Light grey border */
+  border-bottom: 1px solid #e0e0e0;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
 }
 
 .bottom-header nav ul {
@@ -24,19 +27,19 @@
 }
 
 .bottom-header nav ul li a {
-  color: #0a0b0b; /* Blue text color */
+  color: #0a0b0b;
   font-weight: 600;
   padding: 12px 20px;
   display: block;
   font-size: 16px;
   transition: color 0.3s ease, background-color 0.3s ease;
-  border-radius: 4px; /* Rounded corners */
-  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+  border-radius: 4px;
+  font-family:'PlayFair Display';
 }
 
 .bottom-header nav ul li a:hover {
   color: #ffffff;
-  background-color: #0056b3; /* Blue background on hover */
+  background-color: #0056b3;
   font-weight: 700;
 }
 
@@ -45,29 +48,28 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #ffffff; /* White background for dropdown */
+  background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for dropdown */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   min-width: 240px;
   z-index: 1000;
   text-align: left;
   padding: 12px 0;
-  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+  font-family: 'Roboto', sans-serif;
 }
 
 .dropdown-content a {
-  color: #0056b3; /* Blue text color for dropdown items */
+  color: #0056b3;
   padding: 12px 25px;
   text-decoration: none;
   display: block;
   font-size: 15px;
   transition: background-color 0.3s ease, color 0.3s ease;
   border-radius: 4px;
-  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
 }
 
 .dropdown-content a:hover {
-  background-color: #f0f0f0; /* Light grey background on hover */
+  background-color: #f0f0f0;
   color: #0056b3;
 }
 
@@ -88,14 +90,14 @@
   position: absolute;
   top: 0;
   left: 100%;
-  background-color: #ffffff; /* White background for submenus */
+  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   min-width: 240px;
   z-index: 1000;
   text-align: left;
   padding: 12px 0;
-  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+  font-family: 'Roboto', sans-serif;
 }
 
 .dropdown-submenu:hover .dropdown-submenu-content {
@@ -110,5 +112,5 @@
   padding: 12px 25px;
   white-space: nowrap;
   color: #0056b3;
-  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+  font-family: 'Roboto', sans-serif;
 }

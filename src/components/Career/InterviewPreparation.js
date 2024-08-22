@@ -44,7 +44,16 @@ function InterviewPreparation() {
             <li>Personalized Feedback and Tips</li>
           </ul>
           <p>Our comprehensive interview preparation services are designed to help you present your best self in any interview scenario.</p>
-          <a href="/career/interview-preparation" className="btn">Start Preparing</a>
+          <a href="/career/interview-preparation"  className="btn"
+    style={{
+        padding: '10px 20px',
+        fontSize: '16px',
+        borderRadius: '8px',
+        backgroundColor: '#0056b3',
+        color: 'white',
+        border: 'none',
+        cursor: 'pointer'
+    }}>Start Preparing</a>
         </div>
         <div className="interview-preparation-image">
           <img src='/images/interview-preparation.jpg' alt="Interview Preparation" />

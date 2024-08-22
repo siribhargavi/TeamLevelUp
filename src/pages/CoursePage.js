@@ -1,4 +1,3 @@
-// src/pages/CoursePage.js
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import ReactCourse from '../components/courses/ReactCourse';
@@ -11,7 +10,6 @@ import JavaCourse from '../components/courses/JavaCourse';
 import UIUXCourse from '../components/courses/UIUXCourse';
 import AIMLCourse from '../components/courses/AIMLCourse';
 import BlockChainCourse from '../components/courses/BlockChainCourse';
-// Import other course components if any
 
 const CoursePage = () => {
   const { courseName } = useParams();
@@ -28,11 +26,11 @@ const CoursePage = () => {
         return <CyberSecurityCourse />;
       case 'ai-ml':
         return <AIMLCourse />;
-        case 'block-chain':
-          return <BlockChainCourse />;
+      case 'blockchain':
+        return <BlockChainCourse />;
       case 'data-science':
         return <DataScienceCourse />;
-        case 'data-engineering':
+      case 'data-engineering':
         return <DataEngineeringCourse />;
       case 'java':
         return <JavaCourse />;

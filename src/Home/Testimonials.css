@@ -1,28 +1,51 @@
-.testimonials {
-  padding: 60px 30px; /* Slightly increased padding for more space */
-  text-align: center;
-  animation: gradientAnimation 15s ease infinite;
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+/* Testimonials Section */
+.testimonials {
+  padding: 60px 20px;
+  background-color: rgb(25, 28, 32); /* Dark grey background similar to testimonials */
+  text-align: center;
+  position: relative; /* To contain the animated background */
+  overflow: hidden; /* Hide overflow from animated elements */
+  color: rgb(236, 230, 230);
 }
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
+
+/* Subtle Animated Background with Circles */
+.testimonials::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.05) 10%, transparent 40%),
+              radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 10%, transparent 40%),
+              radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 15%, transparent 50%);
+  background-size: 400px 400px;
+  z-index: -1;
+  animation: moveBackground 10s ease-in-out infinite;
+}
+
+/* Smooth Background Animation Keyframes */
+@keyframes moveBackground {
+  0%, 100% {
+    transform: translate(0, 0);
   }
   50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+    transform: translate(50px, 50px);
   }
 }
+
+/* Section Title Styling */
 .testimonials h2 {
   font-size: 38px;
-  font-weight: 700;
-  color: #004080; /* Darker blue for better contrast */
-  margin-bottom: 40px; /* Increased margin for better spacing */
+  font-weight: 400;
+  color: whitesmoke;
+  margin-bottom: 40px;
+  font-family: 'Pacifico', cursive;
   position: relative;
   display: inline-block;
-  padding-bottom: 12px;
+  padding-bottom: 10px;
 }
 
 .testimonials h2::after {
@@ -31,59 +54,73 @@
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  width: 80px; /* Wider underline */
-  height: 5px; /* Thicker underline */
-  background-color: #ffc107; /* Slightly lighter yellow */
+  width: 60px;
+  height: 4px;
+  background-color:white; /* White color for the underline */
   border-radius: 2px;
 }
 
+/* Testimonials Grid */
 .testimonial-cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px; /* Increased gap for better spacing */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns */
+  gap: 20px; /* Space between cards */
 }
 
+/* Individual Testimonial Card */
 .testimonial-card {
-  background-color: #ffffff;
-  border: 1px solid #cccccc; /* Softer border color */
-  border-radius: 16px; /* Larger border radius for a modern look */
-  padding: 35px;
-  width: 300px; /* Slightly wider card */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Deeper shadow for more depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: whitesmoke; /* Lighter gray for the card background */
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow */
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 300px; /* Fixed height for uniformity */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black; /* Ensure text is readable */
 }
 
 .testimonial-card:hover {
-  transform: translateY(-8px); /* More pronounced lift on hover */
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
 }
 
+/* Updated Image Styling */
 .testimonial-card img {
-  width: 90px; /* Larger image size */
-  height: 90px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 25px; /* Increased margin */
-  border: 3px solid #004080; /* Thicker border */
+  margin-bottom: 20px;
+  border: 3px solid #ffcc00; /* Bright yellow border for contrast */
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.quote {
-  font-size: 17px; /* Slightly larger font size */
-  color: #555555; /* Darker grey for more contrast */
-  margin-bottom: 25px; /* Increased margin */
+.testimonial-card img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  border-color: #0056b3; /* Change border color on hover */
+}
+
+/* Quote Styling */
+.testimonial-card .quote {
+  font-size: 18px;
   font-style: italic;
+  color: black; /* Light grey for the quote text */
+  margin-bottom: 15px;
 }
 
-.name {
-  font-size: 20px; /* Larger font for name */
-  font-weight: 700; /* Bolder font weight */
-  color: #004080;
-  margin-bottom: 8px; /* Increased margin */
+/* Name and Title Styling */
+.testimonial-card .name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #0056b3; /* Dark blue for the name */
+  margin-bottom: 5px;
 }
 
-.title {
-  font-size: 15px;
-  color: #555555;
+.testimonial-card .title {
+  font-size: 14px;
+  color: #0056b3; /* Dark blue for the title */
 }

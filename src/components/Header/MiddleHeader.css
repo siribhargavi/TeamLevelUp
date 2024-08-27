@@ -5,8 +5,8 @@
   padding: 10px 20px;
   background-size: cover;
   background-position: center;
+  background-color: white;
   border-bottom: 1px solid #ccc; /* Softer gray border */
-background-image: url('/public/images/solar-background.jpg');
 }
 
 .logo img {
@@ -18,7 +18,6 @@ background-image: url('/public/images/solar-background.jpg');
 .timer {
   display: flex;
   align-items: center;
-  background-color: white; /* Light blue background for better contrast */
   border: 1px solid #007bff; /* Blue border for better alignment with the color scheme */
   padding: 12px 20px;
   border-radius: 4px;
@@ -26,6 +25,7 @@ background-image: url('/public/images/solar-background.jpg');
   color: black; /* Darker blue text for readability */
   font-weight: bold;
   margin: 0 35px 0 80px;
+background-color: aliceblue;
   font-family:'Times New Roman', Times, serif;
 
 }
@@ -42,7 +42,8 @@ background-image: url('/public/images/solar-background.jpg');
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
+  
   font-family:'Times New Roman', Times, serif;
 
 }
@@ -61,14 +62,14 @@ background-image: url('/public/images/solar-background.jpg');
 }
 
 .auth-links button {
-  background-color: white;
+  background-color: aliceblue;
   color: black; /* Darker blue text */
   border: solid #007bff; /* Blue border to match the timer button */
   padding: 12px 24px;
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
   margin-right: 12px;
   font-family:'Times New Roman', Times, serif;
 

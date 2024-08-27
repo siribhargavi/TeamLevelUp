@@ -23,15 +23,13 @@
 
 /* Section Title Styling */
 .features-overview h2 {
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 700;
-  margin-bottom: 40px;
-  color: #0056b3; /* Light gray color */
+  color: #004691;
+  margin-bottom: 20px;
+  text-align: center;
   position: relative;
-  display: inline-block;
   padding-bottom: 10px;
-  margin-top: -10px;
-  font-family: 'Pacifico', cursive;
 }
 
 .features-overview h2::after {

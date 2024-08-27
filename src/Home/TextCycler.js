@@ -33,7 +33,9 @@ const TextCycler = () => {
 
   return (
     <div>
-      <h1 className="cycling-word">{phrases[currentPhraseIndex].word} Courses to Elevate Your Expertise and Level Up.</h1>
+      <h1 className="cycling-word">
+        <span>{phrases[currentPhraseIndex].word}</span> Courses to Elevate Your Expertise and Level Up.
+      </h1>
     </div>
   );
 };

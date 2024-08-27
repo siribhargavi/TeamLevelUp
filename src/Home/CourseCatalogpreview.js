@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './CourseCatalogPreview.css';
 
-const CourseCatalogPreview = ({ courses }) => {
-  const [activeCategory, setActiveCategory] = useState('BootCamps');
+const CourseCatalogPreview = ({ courses = {} }) => {
+  const [activeCategory, setActiveCategory] = useState(Object.keys(courses)[0] || 'AWS');
   const navigate = useNavigate();
 
   const handleLearnMoreClick = (courseName) => {
@@ -21,7 +21,6 @@ const CourseCatalogPreview = ({ courses }) => {
     'UI/UX Design Bootcamp': 'ui-ux',
     'AI & ML Bootcamp': 'ai-ml',
     'Blockchain Bootcamp': 'blockchain',
-    // Add all other course mappings here
   };
 
   const mapCourseNameToRoute = (courseTitle) => {
@@ -43,14 +42,27 @@ const CourseCatalogPreview = ({ courses }) => {
         ))}
       </div>
       <div className="course-list">
-        {courses[activeCategory].map((course) => (
+        {(courses[activeCategory] || []).map((course) => (
           <div key={course.id} className="course-item">
-            <img src={course.image} alt={course.title} />
+            <img src={course.img} alt={course.title} />
             <h4>{course.title}</h4>
             <p>{course.description}</p>
-            <div className="price">
-              {course.price} <span className="discount">{course.discount}</span>
-            </div>
+            {course.videoUrl && (
+              <div className="video-container">
+                <iframe
+                  src={course.videoUrl}
+                  title={course.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            )}
+            {course.price && (
+              <div className="price">
+                {course.price} <span className="discount">{course.discount}</span>
+              </div>
+            )}
             <button
               className="learn-more-button"
               onClick={() => handleLearnMoreClick(mapCourseNameToRoute(course.title))}

@@ -60,8 +60,19 @@ h2 {
     font-size: 26px;
     margin-bottom: 25px;
     color: #004080; /* Dark blue heading */
-    font-family: 'Pacifico', cursive; /* Add some style with a cursive font */
+    font-family: 'Montserrat', sans-serif; /* Modern sans-serif font */
 }
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #ffcc00;
+    border-radius: 2px;
+  }
 
 /* Form Group */
 .form-group {
@@ -75,6 +86,7 @@ h2 {
     font-weight: 600;
     color: #333;
     font-size: 16px;
+    font-family: 'Montserrat', sans-serif; /* Consistent font family */
 }
 
 .form-group input {
@@ -83,6 +95,7 @@ h2 {
     border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 16px;
+    font-family: 'Montserrat', sans-serif; /* Consistent font family */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for input fields */
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -103,6 +116,7 @@ h2 {
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
+    font-family: 'Montserrat', sans-serif; /* Consistent font family */
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for button */
 }

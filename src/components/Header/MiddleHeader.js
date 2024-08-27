@@ -42,7 +42,7 @@ const MiddleHeader = () => {
     <div className="middle-header">
       <div className="logo">
         <a href="/">
-          <img src="/images/levelup.png" alt="TeamLevelUp Logo" />
+          <img src="/images/levelup-logo.png" alt="TeamLevelUp Logo" />
         </a>
       </div>
       <div className="timer">

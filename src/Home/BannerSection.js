@@ -9,8 +9,8 @@ const BannerSection = () => {
     { id: 3, img: '/images/datascience1.jpg', alt: 'Data Science' },
     { id: 4, img: '/images/frontend.jpg', alt: 'Frontend' },
     { id: 5, img: '/images/javainAI.jpg', alt: 'Java in AI' },
+   
   ];
-
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === banners.length - 1 ? 0 : prevIndex + 1

@@ -19,7 +19,7 @@ const BottomHeader = () => {
     <a href="/courses/react">React</a>
     <a href="/courses/java">Java</a>
     <a href="/courses/python">Python</a>  
-      <a href="/courses/aws">AWS Fundamentals</a>
+      <a href="/courses/aws-admin">AWS Fundamentals</a>
       <a href="/courses/azure">Azure Fundamentals</a>
       <a href="/courses/gcp">GCP Fundamentals</a>
       <a href="/courses/data-science">Data Science Basics</a>

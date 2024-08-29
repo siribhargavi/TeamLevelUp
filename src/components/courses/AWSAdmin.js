@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import './ReactCourse.css';
+import './AWSAdmin.css';
 import { useNavigate } from 'react-router-dom';
 
-const ReactCourse = () => {
+const AWSAdmin = () => {
   const navigate = useNavigate();
   const [subtopics, setSubtopics] = useState([]);
   const [showSubtopics, setShowSubtopics] = useState(false);
@@ -115,7 +115,7 @@ const ReactCourse = () => {
           <p><strong>Timings:</strong> 7 PM - 9 PM (Mon-Fri)</p>
         </div>
         <div className="course-image">
-          <img src="/images/react-banner.png" alt="Course" />
+          <img src="/images/aws-admin.webp" alt="Course" />
         </div>
       </section>
 
@@ -126,31 +126,34 @@ const ReactCourse = () => {
         <div class="video-grid">
             <div class="video-item">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/dGcsHMXbSOA" title="React JS Crash Course" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p>React JS Crash Course</p>
+                <p>AWS Admin Crash Course</p>
             </div>
             <div class="video-item">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/yfoY53QXEnI" title="CSS Crash Course For Absolute Beginners" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p>CSS Crash Course For Absolute Beginners</p>
+                <p>AWS Admin Crash Course For Absolute Beginners</p>
             </div>
         </div>
     </div>
 </section>
 
 
-     {/* Skills You Will Gain Section */}
+  {/* Skills You Will Gain Section */}
 <section id="skills" className="skills-gained">
   <h2>Skills You Will Gain</h2>
   <ul>
-    <li>React Components and State Management</li>
-    <li>Using React Hooks (useState, useEffect, etc.)</li>
-    <li>Building Single Page Applications (SPA)</li>
-    <li>Advanced JavaScript and ES6+ Syntax</li>
-    <li>Integration with RESTful APIs</li>
-    <li>Performance Optimization Techniques</li>
-    <li>Testing and Debugging React Applications</li>
-    <li>Version Control with Git and GitHub</li>
-    <li>Implementing Responsive Design with CSS and Flexbox</li>
-    <li>Deploying React Applications to Production</li>
+    <li>Understanding AWS Global Infrastructure</li>
+    <li>Managing EC2 Instances and Load Balancers</li>
+    <li>Setting Up and Configuring VPCs</li>
+    <li>Implementing IAM for User and Group Management</li>
+    <li>Monitoring and Logging with CloudWatch and CloudTrail</li>
+    <li>Managing S3 Buckets and Object Storage</li>
+    <li>Working with AWS RDS and DynamoDB</li>
+    <li>Automating Infrastructure with AWS CloudFormation</li>
+    <li>Implementing Security Best Practices</li>
+    <li>Cost Management and Optimization Strategies</li>
+    <li>Deploying Applications with Elastic Beanstalk</li>
+    <li>Backup and Disaster Recovery Solutions in AWS</li>
+    <li>Managing AWS Billing and Cost Tools</li>
   </ul>
 </section>
 
@@ -193,138 +196,134 @@ const ReactCourse = () => {
   </div>
 </section>
 
+{/* Course Curriculum Section */}
+<section id="curriculum" className="course-curriculum">
+  <h2>Course Curriculum</h2>
+  <div className="curriculum-content">
+    <div className="curriculum-column">
+      <ul className="curriculum-list">
+        <li
+          className="curriculum-item"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          data-subtopics="AWS Overview, AWS Global Infrastructure, Regions and Availability Zones"
+        >
+          <div className="module-title">Module 1:</div>
+          <div className="module-content">Introduction to AWS</div>
+        </li>
+        <li
+          className="curriculum-item"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          data-subtopics="EC2 Instances, AMIs, EBS Volumes, Elastic Load Balancers"
+        >
+          <div className="module-title">Module 2:</div>
+          <div className="module-content">Managing EC2 Instances</div>
+        </li>
+        <li
+          className="curriculum-item"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          data-subtopics="VPC Creation, Subnets, Route Tables, Security Groups, Internet Gateways"
+        >
+          <div className="module-title">Module 3:</div>
+          <div className="module-content">Setting Up and Configuring VPCs</div>
+        </li>
+        <li
+          className="curriculum-item"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          data-subtopics="IAM Users, Groups, Roles, Policies, MFA, Identity Federation"
+        >
+          <div className="module-title">Module 4:</div>
+          <div className="module-content">IAM and Security Management</div>
+        </li>
+        <li
+          className="curriculum-item"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          data-subtopics="CloudWatch Metrics, CloudWatch Alarms, CloudTrail Logs, CloudFormation Templates"
+        >
+          <div className="module-title">Module 5:</div>
+          <div className="module-content">Monitoring and Logging</div>
+        </li>
+      </ul>
+    </div>
+    <div className="curriculum-column">
+      <ul className="curriculum-list">
+        <li
+          className="curriculum-item"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          data-subtopics="S3 Bucket Creation, S3 Object Management, S3 Versioning, S3 Policies"
+        >
+          <div className="module-title">Module 6:</div>
+          <div className="module-content">S3 and Object Storage</div>
+        </li>
+        <li
+          className="curriculum-item"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          data-subtopics="RDS Setup, DynamoDB Basics, Managing Databases in AWS"
+        >
+          <div className="module-title">Module 7:</div>
+          <div className="module-content">Database Management with RDS and DynamoDB</div>
+        </li>
+        <li
+          className="curriculum-item"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          data-subtopics="CloudFormation Stacks, Automation with CloudFormation, Best Practices"
+        >
+          <div className="module-title">Module 8:</div>
+          <div className="module-content">Automation with CloudFormation</div>
+        </li>
+        <li
+          className="curriculum-item"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          data-subtopics="Cost Management Tools, Optimizing Costs, AWS Billing"
+        >
+          <div className="module-title">Module 9:</div>
+          <div className="module-content">Cost Management and Optimization</div>
+        </li>
+        <li
+          className="curriculum-item"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          data-subtopics="Elastic Beanstalk Deployment, Project Setup, Final Project Development"
+        >
+          <div className="module-title">Module 10:</div>
+          <div className="module-content">Final Project and Deployment</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  {showSubtopics && (
+    <div
+      className="subtopics-display"
+      style={{
+        position: 'absolute',
+        top: `${position.y}px`,
+        left: `${position.x}px`,
+        backgroundColor: 'white',
+        border: '1px solid #ccc',
+        padding: '10px',
+        borderRadius: '8px',
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+        zIndex: 1000,
+      }}
+    >
+      <h3>Subtopics</h3>
+      <ul>
+        {subtopics.map((topic, index) => (
+          <li key={index}>{topic}</li>
+        ))}
+      </ul>
+    </div>
+  )}
+</section>
 
-
-  {/* Course Curriculum Section */}
-
-
-      {/* Course Curriculum Section */}
-      <section id="curriculum" className="course-curriculum">
-        <h2>Course Curriculum</h2>
-        <div className="curriculum-content">
-          <div className="curriculum-column">
-            <ul className="curriculum-list">
-              <li
-                className="curriculum-item"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                data-subtopics="Introduction to React,JSX Basics,Setting Up the Environment,React Components,Understanding Props,Virtual DOM,Handling Events,React Developer Tools,JSX In-Depth,Building a Simple App"
-              >
-                <div className="module-title">Module 1:</div>
-                <div className="module-content">Introduction to React</div>
-              </li>
-              <li
-                className="curriculum-item"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                data-subtopics="JSX in Depth,Conditional Rendering,Lists and Keys"
-              >
-                <div className="module-title">Module 2:</div>
-                <div className="module-content">JSX and Rendering Elements</div>
-              </li>
-              <li
-                className="curriculum-item"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                data-subtopics="Creating Components,Passing Props,Reusing Components"
-              >
-                <div className="module-title">Module 3:</div>
-                <div className="module-content">Components and Props</div>
-              </li>
-              <li
-                className="curriculum-item"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                data-subtopics="State Basics,Component Lifecycle,Updating State"
-              >
-                <div className="module-title">Module 4:</div>
-                <div className="module-content">State Management and Lifecycle Methods</div>
-              </li>
-              <li
-                className="curriculum-item"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                data-subtopics="Handling User Input,Form Submission,Form Validation"
-              >
-                <div className="module-title">Module 5:</div>
-                <div className="module-content">Forms and Controlled Components</div>
-              </li>
-            </ul>
-          </div>
-          <div className="curriculum-column">
-            <ul className="curriculum-list">
-              <li
-                className="curriculum-item"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                data-subtopics="useState Hook,useEffect Hook,Custom Hooks"
-              >
-                <div className="module-title">Module 6:</div>
-                <div className="module-content">React Hooks: useState and useEffect</div>
-              </li>
-              <li
-                className="curriculum-item"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                data-subtopics="Client-Side Routing,Nested Routes,Programmatic Navigation"
-              >
-                <div className="module-title">Module 7:</div>
-                <div className="module-content">React Router and SPA</div>
-              </li>
-              <li
-                className="curriculum-item"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                data-subtopics="Context API,Higher-Order Components,Render Props"
-              >
-                <div className="module-title">Module 8:</div>
-                <div className="module-content">Advanced Patterns and Context API</div>
-              </li>
-              <li
-                className="curriculum-item"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                data-subtopics="Code Splitting,Memoization,Performance Optimization Techniques"
-              >
-                <div className="module-title">Module 9:</div>
-                <div className="module-content">Performance Optimization & Final Project</div>
-              </li>
-              <li
-                className="curriculum-item"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                data-subtopics="Project Setup,Development Workflow,Deployment and Optimization"
-              >
-                <div className="module-title">Module 10:</div>
-                <div className="module-content">Final Project</div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        {showSubtopics && (
-          <div
-            className="subtopics-display"
-            style={{
-              position: 'absolute',
-              top: `${position.y}px`,
-              left: `${position.x}px`,
-              backgroundColor: 'white',
-              border: '1px solid #ccc',
-              padding: '10px',
-              borderRadius: '8px',
-              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-              zIndex: 1000,
-            }}
-          >
-            <h3>Subtopics</h3>
-            <ul>
-              {subtopics.map((topic, index) => (
-                <li key={index}>{topic}</li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </section>
 
 
 {/* Assessments & Interactive Features Section */}
@@ -415,4 +414,4 @@ const ReactCourse = () => {
       </div>
   )
 };
-export default ReactCourse;
+export default AWSAdmin;

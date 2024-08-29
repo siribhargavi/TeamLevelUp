@@ -1,4 +1,4 @@
-.about-us-container {
+.tech-support-container {
     max-width: 800px;
     margin: 40px auto;
     padding: 40px;
@@ -10,8 +10,7 @@
     font-family: 'Merriweather', serif;
 }
 
-
-h1{
+.tech-support-heading {
     font-size: 32px;
     font-weight: 700;
     color: #0056b3;
@@ -19,7 +18,8 @@ h1{
     margin-bottom: 20px;
     position: relative;
 }
-h1::after {
+
+.tech-support-heading::after {
     content: '';
     width: 80px;
     height: 4px;
@@ -32,13 +32,29 @@ h1::after {
     margin-bottom: 2px;
 }
 
-.about-us-paragraph {
+.tech-support-intro,
+.tech-support-conclusion {
     font-size: 18px;
     color: #555;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     text-align: justify;
 }
-.about-us-paragraph strong {
-    color: #004691; /* Dark blue color to match the theme */
-    font-weight: 700; /* Bold */
+
+.tech-support-subheading {
+    font-size: 24px;
+    font-weight: 600;
+    color: #004080;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.tech-support-list {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #333;
+    font-size: 18px;
+}
+
+.tech-support-list li {
+    margin-bottom: 10px;
 }

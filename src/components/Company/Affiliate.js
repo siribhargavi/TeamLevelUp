@@ -1,45 +1,21 @@
 import React from 'react';
-import './Blog.css';
+import './Affiliate.css';
 
-const Blog = () => {
-  const blogPosts = [
-    {
-      id: 1,
-      title: "The Importance of Mentorship in Software Development",
-      date: "August 10, 2024",
-      excerpt: "Mentorship plays a crucial role in shaping a successful career in software development. Learn how it can make a difference in your journey...",
-    },
-    {
-      id: 2,
-      title: "Top 5 Programming Languages to Learn in 2024",
-      date: "July 25, 2024",
-      excerpt: "With technology evolving rapidly, keeping up with the latest programming languages is essential. Here are the top 5 languages you should consider mastering...",
-    },
-    {
-      id: 3,
-      title: "How to Build a Strong Portfolio as a Software Student",
-      date: "July 15, 2024",
-      excerpt: "Your portfolio is your gateway to job opportunities in the tech industry. Discover the key elements that can help you create a standout portfolio...",
-    },
-  ];
-
+const Affiliate = () => {
   return (
-    <div className="blog-container">
-      <h1 className="blog-heading"> Blog</h1>
-      <div className="blog-posts">
-        {blogPosts.map(post => (
-          <div key={post.id} className="blog-post">
-            <h2 className="blog-title">{post.title}</h2>
-            <p className="blog-date">{post.date}</p>
-            <p className="blog-excerpt">{post.excerpt}</p>
-            <button className="read-more-btn">Read More</button>
-          </div>
-        ))}
-      </div>
+    <div className="affiliate-container">
+      <h1 className="affiliate-heading">Affiliate Program</h1>
+      <p className="affiliate-paragraph">
+        Welcome to the <strong>Level Up Institute Affiliate Program</strong>! We are excited to partner with you to promote our top-notch courses and services. By joining our affiliate program, you will have the opportunity to earn commissions by referring students to our platform.
+      </p>
+      <p className="affiliate-paragraph">
+        As a Level Up affiliate, you'll receive a unique referral link that tracks the students you bring to our platform. For every successful enrollment made through your link, you will earn a generous commission. Our program is designed to be straightforward, transparent, and rewarding.
+      </p>
+      <p className="affiliate-paragraph">
+        Whether you're a blogger, content creator, or industry professional, the Level Up Affiliate Program is a great way to monetize your network while helping others level up their careers. Join us today and start earning!
+      </p>
     </div>
   );
 };
 
-export default Blog;
-
-
+export default Affiliate;

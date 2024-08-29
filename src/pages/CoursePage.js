@@ -11,6 +11,8 @@ import UIUXCourse from '../components/courses/UIUXCourse';
 import AIMLCourse from '../components/courses/AIMLCourse';
 import BlockChainCourse from '../components/courses/BlockChainCourse';
 
+
+
 const CoursePage = () => {
   const { courseName } = useParams();
 

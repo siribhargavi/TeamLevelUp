@@ -1,11 +1,11 @@
 /* Bottom Header */
 .bottom-header {
-  background-color: #e1ecf0; /* Dark blue background for a sleek look */
+  background-color: #e1ecf0; /* Light blue background for a clean look */
   padding: 16px 42px;
-  border-bottom: 2px solid #142850; /* Slightly lighter blue for a cleaner finish */
+  border-bottom: 2px solid #142850; /* Dark blue border for definition */
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Deeper shadow for added depth */
-  font-family:'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .bottom-header nav ul {
@@ -33,7 +33,7 @@
   font-size: 18px;
   transition: color 0.3s ease, background-color 0.3s ease;
   border-radius: 6px;
-  font-family:'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .bottom-header nav ul li a:hover {
@@ -55,7 +55,7 @@
   z-index: 1000;
   text-align: left;
   padding: 16px 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Times New Roman', Times, serif; /* Consistent font-family */
 }
 
 .dropdown-content a {
@@ -99,9 +99,10 @@
   z-index: 1000;
   text-align: left;
   padding: 16px 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Times New Roman', Times, serif; /* Consistent font-family */
 }
 
+/* Show submenu on hover */
 .dropdown-submenu:hover .dropdown-submenu-content {
   display: block;
   opacity: 1;
@@ -115,7 +116,7 @@
   white-space: nowrap;
   background-color: #142850;
   color: #FFCC00;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Times New Roman', Times, serif; /* Consistent font-family */
 }
 
 .dropdown-submenu a:hover {

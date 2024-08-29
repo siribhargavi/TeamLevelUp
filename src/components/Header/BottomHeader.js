@@ -12,17 +12,20 @@ const BottomHeader = () => {
   <a href="#">Courses</a>
   <div className="dropdown-content">
     
-    {/* Top Courses */}
-    <div className="dropdown-submenu">
-      <a href="#">Top Courses</a>
-      <div className="dropdown-submenu-content">
-        <a href="/courses/react">React</a>
-        <a href="/courses/java">Java</a>
-        <a href="/courses/python">Python</a>
-        <a href="/courses/aws">AWS Fundamentals</a>
-        <a href="/courses/data-science">Data Science Basics</a>
-      </div>
-    </div>
+   {/* Top Courses */}
+<div className="dropdown-submenu">
+  <a href="#">Top Courses</a>
+  <div className="dropdown-submenu-content">
+    <a href="/courses/react">React</a>
+    <a href="/courses/java">Java</a>
+    <a href="/courses/python">Python</a>  
+      <a href="/courses/aws">AWS Fundamentals</a>
+      <a href="/courses/azure">Azure Fundamentals</a>
+      <a href="/courses/gcp">GCP Fundamentals</a>
+      <a href="/courses/data-science">Data Science Basics</a>
+  </div>
+</div>
+
 
     {/* Bundled Courses */}
     <div className="dropdown-submenu">

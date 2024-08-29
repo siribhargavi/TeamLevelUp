@@ -2,11 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
 
-/* Ensure all headings use Times New Roman */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Times New Roman', Times, serif !important;
-}
-
 .react-course-page {
     font-family: 'Arial', sans-serif;
     color: #333;
@@ -58,7 +53,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #003366; /* Darker blue text on hover */
     font-weight: bolder; /* Slightly bolder font weight on hover */
 }
-
 /* Course Overview Section */
 .course-overview {
     display: flex;
@@ -91,7 +85,8 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.5px; /* Slight spacing for readability */
     position: relative; /* Position relative for the underline */
     text-align: center;
-    font-family:'Times New Roman', Times, serif; /* Updated font-family */
+    font-family: 'Pacifico', cursive;
+
 }
 
 .course-details h2::after {
@@ -107,6 +102,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 2px; /* Slight rounding for a smooth look */
 }
 
+
 .course-details p {
     font-family: 'Merriweather', serif; /* A classic serif font for a more formal look */
     font-size: 20px; /* Larger font for better readability */
@@ -114,6 +110,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 12px;
     line-height: 1.8; /* Spacious line height for easier reading */
 }
+
+
 
 .course-image {
     flex: 1;
@@ -153,7 +151,6 @@ h1, h2, h3, h4, h5, h6 {
         max-width: 100%; /* Full width for smaller devices */
     }
 }
-
 /* Video Learning Section */
 .video-learning {
     padding: 60px 20px;
@@ -195,8 +192,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 800;
     color: #0056b3;
     margin-bottom: 30px;
-    font-family:'Times New Roman', Times, serif; /* Updated font-family */
+    font-family: 'Pacifico', cursive;
     position: relative;
+    
 }
 
 .video-learning h2::after {
@@ -289,7 +287,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 25px;
     text-align: center;
     position: relative;
-  font-family:'Times New Roman', Times, serif;
+    font-family: 'Pacifico', cursive;
 }
 
 .skills-gained h2::after {
@@ -357,7 +355,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #0056b3;
     margin-bottom: 25px;
     position: relative;
-  font-family:'Times New Roman', Times, serif;
+    font-family: 'Pacifico', cursive;
 }
 
 .roadmap h2::after {
@@ -452,7 +450,7 @@ h1, h2, h3, h4, h5, h6 {
 .demo-container h2 {
     font-size: 28px;
     color: #0056b3;
-  font-family:'Times New Roman', Times, serif;
+    font-family: 'Pacifico', cursive;
     margin-bottom: 20px;
     position: relative;
     display: inline-block;
@@ -529,7 +527,7 @@ h1, h2, h3, h4, h5, h6 {
 .instructor-info h3 {
     font-size: 24px;
     color: #0056b3;
-  font-family:'Times New Roman', Times, serif;
+    font-family: 'Pacifico', cursive;
     margin-bottom: 10px;
     position: relative;
     display: inline-block;
@@ -598,7 +596,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #0056b3;
     margin-bottom: 30px;
     text-align: center;
-  font-family:'Times New Roman', Times, serif;
+    font-family: 'Pacifico', cursive;
     position: relative;
 }
 
@@ -737,7 +735,7 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
     position: relative;
     padding-bottom: 10px;
-  font-family:'Times New Roman', Times, serif;
+    font-family: 'Pacifico', cursive;
 }
 
 .interactive-features h2::after {
@@ -872,7 +870,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     display: inline-block;
     padding-bottom: 10px;
-  font-family:'Times New Roman', Times, serif;
+    font-family: 'Pacifico', cursive;
 }
 
 .certification-text h2::after {
@@ -946,7 +944,7 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
     padding-bottom: 10px;
     border-bottom: 4px solid #ffeb3b; /* Underline effect */
-  font-family:'Times New Roman', Times, serif;
+    font-family: 'Pacifico', cursive;
 }
 
 .logo-grid {

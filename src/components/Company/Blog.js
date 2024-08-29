@@ -21,11 +21,29 @@ const Blog = () => {
       date: "July 15, 2024",
       excerpt: "Your portfolio is your gateway to job opportunities in the tech industry. Discover the key elements that can help you create a standout portfolio...",
     },
+    {
+      id: 4,
+      title: "The Future of AI in Software Development",
+      date: "June 30, 2024",
+      excerpt: "AI is transforming the software development landscape. Explore how AI tools and techniques are being integrated into modern software engineering practices...",
+    },
+    {
+      id: 5,
+      title: "Mastering Remote Work: Tips for Software Developers",
+      date: "June 20, 2024",
+      excerpt: "Remote work is becoming the norm in the tech industry. Learn how to stay productive, maintain work-life balance, and thrive as a remote software developer...",
+    },
+    {
+      id: 6,
+      title: "Cybersecurity Best Practices for Developers",
+      date: "June 10, 2024",
+      excerpt: "In an era of increasing cyber threats, developers must prioritize security in their workflows. Here are essential cybersecurity practices every developer should know...",
+    },
   ];
 
   return (
     <div className="blog-container">
-      <h1 className="blog-heading"> Blog</h1>
+      <h1 className="blog-heading">Blog</h1>
       <div className="blog-posts">
         {blogPosts.map(post => (
           <div key={post.id} className="blog-post">
@@ -41,5 +59,3 @@ const Blog = () => {
 };
 
 export default Blog;
-
-

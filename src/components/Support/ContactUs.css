@@ -1,5 +1,4 @@
-/* Affiliate Program Container */
-.affiliate-container {
+.support-page {
   max-width: 800px;
   margin: 40px auto;
   padding: 40px;
@@ -11,8 +10,7 @@
   font-family: 'Merriweather', serif;
 }
 
-/* Heading Styling */
-.affiliate-heading {
+h1 {
   font-size: 32px;
   font-weight: 700;
   color: #0056b3;
@@ -21,7 +19,7 @@
   position: relative;
 }
 
-.affiliate-heading::after {
+h1::after {
   content: '';
   width: 80px;
   height: 4px;
@@ -33,15 +31,9 @@
   border-radius: 2px;
 }
 
-/* Paragraph Styling */
-.affiliate-paragraph {
+p {
   font-size: 18px;
   color: #555;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   text-align: justify;
-}
-
-.affiliate-paragraph strong {
-  color: #004691; /* Dark blue color to match the theme */
-  font-weight: 700; /* Bold */
 }

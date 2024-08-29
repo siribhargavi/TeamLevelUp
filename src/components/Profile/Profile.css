@@ -7,32 +7,34 @@ body {
     color: #333;
 }
 
-/* Profile Page Background Animation */
-.profile-page-container::before {
+/* Custom Profile Page Background Animation */
+.custom-profile-container::before {
     content: '';
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(173, 216, 230, 0.2) 0%, transparent 70%);
-    animation: rotateBackground 10s linear infinite;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #ffffff, #7199c1, #ffffff, #004080);
+    background-size: 400% 400%;
+    animation: customMoveGradient 15s ease infinite;
     z-index: -1;
-    transform-origin: center;
 }
 
-/* Animation Keyframes */
-@keyframes rotateBackground {
+@keyframes customMoveGradient {
     0% {
-        transform: rotate(0deg);
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
     }
     100% {
-        transform: rotate(360deg);
+        background-position: 0% 50%;
     }
 }
 
-/* Profile Page Container */
-.profile-page-container {
+/* Custom Profile Page Container */
+.custom-profile-container {
     position: relative;
     max-width: 1200px;
     margin: 50px auto;
@@ -44,48 +46,49 @@ body {
     z-index: 1;
 }
 
-/* Profile Header */
-.profile-header {
+/* Custom Profile Header */
+.custom-profile-header {
     text-align: center;
     margin-bottom: 50px;
     position: relative;
 }
 
-.profile-picture {
+.custom-profile-picture {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
-    border: 5px solid #3498db;
+    border: 5px solid black;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.profile-picture:hover {
+.custom-profile-picture:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-.profile-header h1 {
-    font-size: 32px;
+.custom-profile-header h1 {
+    font-size: 30px;
     font-weight: 700;
-    color: #2c3e50;
+    color: #004691;
     margin-bottom: 8px;
 }
 
-.profile-header p {
+.custom-profile-header p {
     font-size: 18px;
-    color: #7f8c8d;
+    color: hsl(45, 89%, 4%);
     margin-bottom: 10px;
+    text-align: center;
 }
 
-/* Rank Badge Styling */
-.rank-badge {
+/* Custom Rank Badge Styling */
+.custom-rank-badge {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #2ecc71;
-    color: #ffffff;
+    background-color: #ffcc00;
+    color: #004080;
     border-radius: 25px;
     font-weight: 600;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -94,22 +97,22 @@ body {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.rank-badge:hover {
-    background-color: #27ae60;
+.custom-rank-badge:hover {
+    background-color: #ffb300;
     transform: translateY(-3px);
 }
 
-/* Profile Completeness */
-.profile-completeness {
+/* Custom Profile Completeness */
+.custom-profile-completeness {
     margin-top: 30px;
     font-size: 16px;
-    color: #333;
+    color: black;
     position: relative;
     width: 80%;
     margin: 20px auto;
 }
 
-.progress-bar {
+.custom-progress-bar {
     width: 100%;
     background-color: #e0e0e0;
     border-radius: 10px;
@@ -118,38 +121,38 @@ body {
     margin-top: 10px;
 }
 
-.progress {
-    background-color: #3498db;
+.custom-progress {
+    background-color: #004691;
     height: 100%;
     border-radius: 10px;
 }
 
-/* Social Links */
-.social-links {
+/* Custom Social Links */
+.custom-social-links {
     margin-top: 20px;
 }
 
-.social-links a {
-    color: #3498db;
+.custom-social-links a {
+    color: #004691;
     text-decoration: none;
     margin: 0 10px;
     font-size: 18px;
     transition: color 0.3s ease;
 }
 
-.social-links a:hover {
-    color: #2980b9;
+.custom-social-links a:hover {
+    color: #003060;
 }
 
-/* Profile Content */
-.profile-content {
+/* Custom Profile Content */
+.custom-profile-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
 
-.profile-section {
-    background-color: #f9fafc;
+.custom-profile-section {
+    background-color: #f0f8ff;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -157,65 +160,56 @@ body {
     position: relative;
 }
 
-.profile-section:hover {
+.custom-profile-section:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.profile-section h2 {
+.custom-profile-section h2 {
     font-size: 22px;
     font-weight: bold;
-    color: #2980b9;
+    color: #004691;
     margin-bottom: 20px;
-    border-left: 5px solid #2980b9;
+    border-left: 5px solid #004691;
     padding-left: 15px;
     text-transform: uppercase;
-    position: relative;
+    text-decoration: none !important; /* Ensure no underline */
 }
 
-.profile-section h2::after {
-    content: '';
-    width: 80px;
-    height: 3px;
-    background-color: #3498db;
-    display: block;
-    margin: 8px 0 0;
-    border-radius: 2px;
-}
 
-.profile-section ul {
+.custom-profile-section ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.profile-section ul li {
+.custom-profile-section ul li {
     font-size: 16px;
-    color: #34495e;
+    color: #004080;
     margin-bottom: 10px;
     padding-left: 25px;
     position: relative;
 }
 
-.profile-section ul li::before {
+.custom-profile-section ul li::before {
     content: '•';
     position: absolute;
     left: 0;
-    color: #3498db;
+    color: #004691;
     font-size: 20px;
     line-height: 1;
 }
 
-/* Badges */
-.badges-list {
+/* Custom Badges */
+.custom-badges-list {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
     justify-content: center;
 }
 
-.badge {
-    background-color: #3498db;
+.custom-badge {
+    background-color: #004691;
     color: #ffffff;
     padding: 10px 20px;
     border-radius: 25px;
@@ -225,34 +219,34 @@ body {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.badge:hover {
+.custom-badge:hover {
     transform: scale(1.08);
-    background-color: #2980b9;
+    background-color: #003060;
 }
 
-/* Responsive Design */
+/* Custom Responsive Design */
 @media (max-width: 768px) {
-    .profile-page-container {
+    .custom-profile-container {
         padding: 20px;
     }
 
-    .profile-header h1 {
+    .custom-profile-header h1 {
         font-size: 28px;
     }
 
-    .profile-header p {
+    .custom-profile-header p {
         font-size: 16px;
     }
 
-    .profile-section h2 {
+    .custom-profile-section h2 {
         font-size: 20px;
     }
 
-    .profile-section ul li {
+    .custom-profile-section ul li {
         font-size: 14px;
     }
 
-    .badges-list {
+    .custom-badges-list {
         flex-direction: column;
         align-items: center;
     }

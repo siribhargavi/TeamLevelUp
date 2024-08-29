@@ -1,75 +1,102 @@
+/* Careers Container */
 .careers-container {
-    padding: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-  }
-  
-  .careers-heading {
-    font-size: 2.5em;
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .careers-intro {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #555;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .job-openings {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  
-  .job-opening {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .job-title {
-    font-size: 1.8em;
-    color: #004085;
-    margin-bottom: 10px;
-  }
-  
-  .job-location,
-  .job-type {
-    font-size: 1em;
-    color: #777;
-    margin-bottom: 10px;
-  }
-  
-  .job-description {
-    font-size: 1.2em;
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
-  .job-requirements {
-    font-size: 1em;
-    color: #555;
-    margin-bottom: 20px;
-    list-style: disc;
-    margin-left: 20px;
-  }
-  
-  .job-apply-link {
-    padding: 10px 15px;
-    background-color: #004085;
-    color: white;
-    text-decoration: none;
-    border-radius: 3px;
-    transition: background-color 0.3s;
-  }
-  
-  .job-apply-link:hover {
-    background-color: #003366;
-  }
-  
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Merriweather', serif;
+  color: #333;
+}
+
+/* Heading Styling */
+.careers-heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0056b3;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+
+/* Introduction Paragraph */
+.careers-intro {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+/* Job Openings */
+.job-openings {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+/* Individual Job Opening */
+.job-opening {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-opening:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Job Title */
+.job-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #004691;
+  margin-bottom: 10px;
+}
+
+/* Job Location and Type */
+.job-location, .job-type {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* Job Description */
+.job-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Job Requirements */
+.job-requirements {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.job-requirements li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Apply Link */
+.job-apply-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: #ffffff;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.job-apply-link:hover {
+  background-color: #004080;
+}

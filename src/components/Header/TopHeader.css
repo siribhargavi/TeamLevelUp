@@ -8,14 +8,14 @@
   padding: 2px 0;
   height: 30px;
   font-size: 14px;
-  color: white;
+  color: yellow;
   text-align: center;
   display: flex;
   padding-left: 10px;
   align-items: center;
   justify-content: center;
   font-family:'Times New Roman', Times, serif;
-background-color: #0D2A63;
+
 }
 
 .top-header p {

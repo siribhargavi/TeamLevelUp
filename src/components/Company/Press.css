@@ -1,57 +1,98 @@
+/* Press Container */
 .press-container {
-    padding: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-  }
-  
-  .press-heading {
-    font-size: 2.5em;
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .press-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .press-item {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .press-title {
-    font-size: 1.8em;
-    color: #004085;
-  }
-  
-  .press-date {
-    font-size: 0.9em;
-    color: #999;
-    margin-bottom: 10px;
-  }
-  
-  .press-excerpt {
-    font-size: 1.2em;
-    color: #555;
-    margin-bottom: 15px;
-  }
-  
-  .press-read-more {
-    padding: 10px 15px;
-    background-color: #004085;
-    color: white;
-    text-decoration: none;
-    border-radius: 3px;
-    transition: background-color 0.3s;
-  }
-  
-  .press-read-more:hover {
-    background-color: #003366;
-  }
-  
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Merriweather', serif;
+  color: #333;
+}
+
+/* Heading Styling */
+.press-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0056b3;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.press-heading::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background-color: #ffcc00;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Introduction Paragraph */
+.press-intro {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+/* Press List */
+.press-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+/* Individual Press Item */
+.press-item {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.press-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Press Title */
+.press-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #004691;
+  margin-bottom: 10px;
+}
+
+/* Press Date */
+.press-date {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+/* Press Excerpt */
+.press-excerpt {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Read More Link */
+.press-read-more {
+  font-size: 16px;
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.press-read-more:hover {
+  color: #003060;
+}

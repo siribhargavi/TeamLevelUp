@@ -43,8 +43,8 @@
     font-weight: 700;
     color: #004080; /* Adjusted to a slightly darker blue for better contrast */
     margin-bottom: 50px; /* Reduced bottom margin to move heading closer to the top */
-    font-family: 'Pacifico', cursive;
     position: relative;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .form-container h2::after {

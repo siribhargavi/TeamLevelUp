@@ -29,6 +29,9 @@ const Press = () => {
   return (
     <div className="press-container">
       <h1 className="press-heading">Press Releases</h1>
+      <p className="press-intro">
+        Stay updated with the latest news and announcements from Level Up Institute. Explore our recent press releases to learn more about our initiatives, partnerships, and achievements.
+      </p>
       <div className="press-list">
         {pressReleases.map(release => (
           <div key={release.id} className="press-item">

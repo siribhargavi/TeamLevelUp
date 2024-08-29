@@ -1,40 +1,82 @@
-.about-us-container {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-  }
-  
-  .about-us-heading {
-    font-size: 2.5em;
-    text-align: center;
-    color: #333;
-  }
-  
-  .about-us-subheading {
-    font-size: 1.8em;
-    margin: 20px 0 10px;
-    color: #333;
-  }
-  
-  .about-us-paragraph {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #555;
-  }
-  
-  .about-us-list {
-    font-size: 1.2em;
-    color: #555;
-    margin-left: 20px;
-    line-height: 1.6;
-  }
-  
-  .about-us-final-note {
-    font-size: 1.2em;
-    margin-top: 20px;
-    color: #333;
-    font-weight: bold;
-    text-align: center;
-  }
-  
+/* Blog Container */
+.blog-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Merriweather', serif;
+}
+
+/* Blog Heading */
+.blog-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0056b3;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* Blog Posts Container */
+.blog-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Individual Blog Post */
+.blog-post {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog Title */
+.blog-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #004691;
+  margin-bottom: 8px;
+}
+
+/* Blog Date */
+.blog-date {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+/* Blog Excerpt */
+.blog-excerpt {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Read More Button */
+.read-more-btn {
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 16px;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+.read-more-btn:hover {
+  background-color: #003d80;
+  transform: translateY(-2px);
+}
